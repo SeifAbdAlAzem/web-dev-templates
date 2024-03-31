@@ -1,0 +1,195 @@
+include includes/variables.pug
+
+doctype html
+html(lang="en")
+    head
+        include includes/meta.pug
+        title Dashboard
+        include includes/styles.pug
+    body
+        .sidebar
+                p(class= "logo") Elzero
+                ul
+                    each item, index in listItems
+                        li(class=index === 0 ? 'active' : '')
+                            a(href= item === 'Dashboard' ?  `${htmlFilesPath}index.html` : `${htmlFilesPath}${item.toLowerCase()}.html`)
+                                i(class=`${icons[index]} fa-fw`)
+                                span=item
+        include includes/header.pug
+        main
+            block pageHeading
+                h1(class="page-heading") Dashboard
+            div(class="grid-two dashboard")
+                |
+                // Welcome Box
+                .box.welcome
+                    .welcome-head
+                        .intro
+                            h2.widget-heading Welcome
+                            p.widget-desc Elzero
+                        img(src="Assets/imgs/welcome.png", alt="welcome")
+                        img.profile-img(src="Assets/imgs/avatar.png", alt="profile image")
+                    .welcome-body
+                        each info in Userinfo
+                            .info
+                                h3= info.title
+                                p= info.desc
+                    a.btn-shape.blue-bk(href="./profile.html") Profile
+                |
+                |
+                // Quick Draft Box
+                .box.draft
+                    h2.widget-heading Quick Draft
+                    p.widget-desc Write A Draft For Your Ideas
+                    form(action="")
+                        input(type="text", name="title", id="title", placeholder="Title")
+                        textarea(name="thought", id="thought", placeholder="Your Thought")
+                        input.btn-shape.blue-bk(type="submit", value="Save")
+                |
+                |
+                // Yearly Targets Box
+                .box.targets
+                    h2.widget-heading Yearly Targets
+                    p.widget-desc Targets Of The Year
+                    each target in targets
+                        .target(class=target.color.toLowerCase())
+                            .icon
+                                i(class="fa-solid " + target.icon)
+                            .target-content
+                                p= target.title
+                                span.target-value= target.value
+                                .target-stat(data-target=target.percent)
+                                    span(class=target.color.toLowerCase() + "-bk")= target.percent
+                |
+                |
+                // Tickets Statistics Box
+                .box.tickets
+                    h2.widget-heading Tickets Statistics
+                    p.widget-desc Everything About Support Tickets
+                    .tickets-stats
+                        each ticket in tickets
+                            .ticket-state
+                                i(class=`${ticket.icon} ${ticket.iconStyle}`)
+                                h3= ticket.count
+                                p= ticket.status
+                |
+                |
+                // Latest News Box
+                .box.news
+                    h2.widget-heading Latest News
+                    each news in latestNews
+                        .latest-news
+                            img(src=imgsPath + news.img, alt=news.title)
+                            .news-content
+                                h3= news.title
+                                p= news.desc
+                            p.btn-shape.grey-bk= news.time
+                |
+                |
+                // Latest Tasks Box
+                .box.tasks
+                    h2.widget-heading Latest Tasks
+                    each task, index in tasks
+                        .latest-task(class = index === 3 || index === 1 ? "done" : "")
+                            .task-content
+                                h3= task.title
+                                p= task.desc
+                            i.fa-regular.fa-trash-can.delete
+                |
+                |
+                // Top Searched Items Box
+                .box.top-searched
+                    h2.widget-heading Top Search Items
+                    .top-results
+                        .result-items-head
+                            p.grey-color Keyword
+                            p.grey-color Search count
+                        each item in searchedItems
+                            .result-item
+                                p= item.keyword
+                                span.btn-shape.grey-bk.span-btn-style= item.count
+                |
+                |
+                // Latest Uploads Box
+                .box.uploads
+                    h2.widget-heading Latest Uploads
+                    each file in uploads
+                        .uploaded-file
+                            .file-details
+                                img(src=imgsPath + file.icon, alt=file.icon.split('.')[0])
+                                .file-head
+                                    h3= file.name
+                                    p= file.uploader
+                            span.btn-shape.grey-bk.span-btn-style= file.size
+                |
+                |
+                // Last Project Progress Box
+                .box.projects-progress
+                    h2.widget-heading Last Project Progress
+                    each progress in projectsProgress
+                        .project-progress(class=(progress === "Test The Project" ? " animated-progress" : "") + (progress === "Finish The Project & Get Money" ? " last-project" : ""))
+                            p= progress
+                    img.launch-icon(src=imgsPath + "project.png", alt="launch-icon")
+                |
+                |
+                // Reminders Box
+                .box.reminders
+                    h2.widget-heading Reminders
+                    ul
+                        each reminder in reminders
+                            li.reminder(class=reminder.class)
+                                p= reminder.text
+                                span= reminder.date
+                |
+                |
+                // Latest Post Box
+                .box.posts
+                    h2.widget-heading Latest Post
+                    .post-writer
+                        img(src="Assets/imgs/avatar.png", alt="profile image")
+                        .writer-details
+                            p Osama Elzero
+                            span About 3 Hours Ago
+                    p.post-content You Can Fool All Of The People Some Of The Time, And Some Of The People All Of The Time, But You Can't Fool All Of The People All Of The Time.
+                    .post-stats
+                        .love
+                            i.fa-regular.fa-heart
+                            span 1.8K
+                        .comments
+                            i.fa-regular.fa-comments
+                            span 500
+                |
+                |
+                // Social Media Stats Box
+                .box.media
+                    h2.widget-heading Social Media Stats
+
+                    each media in mediaAccounts
+                        .media-account(class = media.mtype)
+                            .media-app
+                                i(class= `${media.icon} ${media.iconStyle}`)
+                            p= media.followers
+                            a.btn-shpe(class= btnColor, href="#")= media.btnText
+                |
+                |
+                // Projects Box
+                .box.projects
+                    h2.widget-heading Projects
+                    table
+                        thead
+                            tr
+                                each header in tableHeaders
+                                    th= header
+                        tbody
+                            each project in projects
+                                tr
+                                    td= project.name
+                                    td= project.date
+                                    td= project.client
+                                    td= project.price
+                                    td
+                                        .project-team
+                                            each member in project.team
+                                                img(src=`${imgsPath}${member}`, alt=member.split('.')[0])
+                                    td
+                                        p.btn-shape(class=project.status === "Completed" ? "green-bk" : project.status === "In Progress" ? "blue-bk" : project.status === "Pending" ? "orange-bk" :  project.status === "Rejected" ? "red-bk" : "")= project.status

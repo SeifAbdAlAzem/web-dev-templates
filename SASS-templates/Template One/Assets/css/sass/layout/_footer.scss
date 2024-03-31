@@ -1,0 +1,92 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixins' as *;
+
+footer {
+    background-color: #e2e2e2;
+    padding-top: 40px;
+    .footer-content {
+        color: $grey-color;
+        display: grid;
+        grid-template-columns: minmax(40%, 1fr) repeat(auto-fill, minmax(22%, 1fr));
+        gap: 30px;
+        margin-bottom: 20px;
+        @include breakpoints(mobile) {
+            grid-template-columns: 100%;
+        }
+        h2 {
+            font-size: 20px;
+            color: #000;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+        .latest-blog {
+            display: flex;
+            margin-bottom: 20px;
+            img {
+                width: 100px;
+                border: 2px solid #fff;
+                margin-right: 10px;
+            }
+            h3 {
+                font-weight: normal;
+                margin-bottom: 10px;
+                color: $main-color;
+            }
+            p {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+        }
+        .company-details {
+            p {
+                font-size: 12px;
+                margin-bottom: 10px;
+                line-height: 1.5;
+                &:nth-of-type(2) {
+                    span {
+                        font-weight: bold;
+                        color: $main-color;
+                    }
+                }
+                &:last-child {
+                    span {
+                        color: #000;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .contact-us {
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                input {
+                    border: none;
+                    border-radius: 5px;
+                    padding: 5px;
+                    &[type = submit] {
+                        width: 50%;
+                        color: #fff;
+                        text-transform: uppercase;
+                        padding: 5px 10px;
+                        background-color: $main-color;
+                        cursor: pointer;
+                    }
+                }
+                textarea {
+                    height: 80px;
+                    padding: 5px;
+                    resize: none;
+                    border: none;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    .copy-right {
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid #c5c5c5;
+    }
+}

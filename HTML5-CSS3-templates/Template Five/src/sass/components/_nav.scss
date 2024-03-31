@@ -1,0 +1,61 @@
+@use "../helpers/variables" as *;
+@use "../helpers/extends" as *;
+
+header {
+    @extend %main-width;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: $white-bk;
+    .search {
+        border: 1px solid $border-color;
+        border-radius: 8px;
+        padding-left: 10px;
+        input {
+            font-size: 13px;
+            border: none;
+            outline: none;
+            width: 160px;
+            padding: 10px;
+            border-radius: 8px;
+            transition-duration: $transition-duration;
+            &:focus {
+                width: 200px;
+            }
+            &::placeholder {
+                font-size: 13px;
+            }
+        }
+        &::before {
+            font-family: var(--fa-style-family-classic);
+            content: "\f002";
+            font-weight: 900;
+            font-size: 14px;
+            color: $grey-color;
+        }
+    }
+    .icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .notifications {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background-color: $red-color;
+                right: -5px;
+                top: -5px;
+                border-radius: 50%;
+            }
+        }
+        img {
+            width: 32px;
+            height: 32px;
+            margin-left: 30px;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixins' as *;
+
+header {
+    margin-bottom: 30px;
+    padding: 20px 0;
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include breakpoints(mobile) {
+            flex-direction: column;
+            gap: 15px;
+        }
+        .logo {
+            text-align: center;
+            h1 {
+                margin: 0;
+                color: $main-color;
+            }
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            li:not(:last-child) {
+                margin: 0 10px;
+                @include breakpoints(mobile) {
+                    margin: 0 8px;
+                }
+                a {
+                    color: #000;
+                    font-size: 18px;
+                    transition-duration: $transition-duration;
+                    &:hover {
+                        background-color: $main-color;
+                        padding: 10px;
+                        font-size: 14px;
+                        color: #fff;
+                        @include prefixer(border-radius, 10px, webkit moz o);
+                        @include breakpoints(mobile) {
+                            padding: 5px;
+                            font-size: 12px;
+                        }
+                    }
+                    @include breakpoints(mobile) {
+                        font-size: 11px;
+                    }
+                }
+            }
+            &:last-child i {
+                margin-left: 15px;
+                font-size: 20px;
+                color: $main-color;
+            }
+        }
+    }
+}

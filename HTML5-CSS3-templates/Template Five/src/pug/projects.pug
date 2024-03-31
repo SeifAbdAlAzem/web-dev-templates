@@ -1,0 +1,42 @@
+include includes/variables.pug
+
+doctype html
+html(lang="en")
+    head
+        include includes/meta.pug
+        title Projects
+        include includes/styles.pug
+    body
+        .sidebar
+                p(class= "logo") Elzero
+                ul
+                    each item, index in listItems
+                        li(class=index === 3 ? 'active' : '')
+                            a(href= item === 'Dashboard' ?  `${htmlFilesPath}index.html` : `${htmlFilesPath}${item.toLowerCase()}.html`)
+                                i(class=`${icons[index]} fa-fw`)
+                                span=item
+        include includes/header.pug
+        main
+            h1(class="page-heading") Projects
+            |
+            |
+            .grid-two.projects
+                // Projects Section
+                each project in projectsBoxs
+                    .box.project
+                        div
+                            p= project.title
+                            span= project.date
+                        p= project.description
+
+                        .project-team
+                            each teamMember in project.teamsMembers
+                                img(src=`${imgsPath}${teamMember}`, alt=teamMember.split(".")[0])
+
+                        .project-tasks
+                            each task in project.tasks
+                                span.btn-shape= task
+
+                        div
+                            .project-progress(class=project.progressLevel)
+                            span= project.cost

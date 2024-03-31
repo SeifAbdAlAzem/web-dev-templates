@@ -1,0 +1,18 @@
+$display: (
+    "prefix": "d",
+    "values": (
+        "flex": flex,
+        "inline": inline,
+        "block": block,
+        "inline-block": inline-block,
+    )
+);
+
+$prefix: map-get($display, "prefix");
+$values: map-get($display, "values");
+
+@each $key, $value in $values {
+    .#{$prefix}-#{$key}{
+        display: $value;
+    }
+}

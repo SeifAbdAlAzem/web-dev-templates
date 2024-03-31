@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <!-- Font Awesome CSS file -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- normalize CSS file -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- myFramework CSS file -->
+    <link rel="stylesheet" href="./css/myFramework.css">
+    <!-- main CSS file -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- Google Font Link "Open Sans"-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&amp;display=swap">
+  </head>
+  <body>
+    <div class="sidebar">
+      <p class="logo">Elzero</p>
+      <ul>
+        <li><a href="./index.html"><i class="fa-regular fa-chart-bar fa-fw"></i><span>Dashboard</span></a></li>
+        <li><a href="./settings.html"><i class="fa-solid fa-gear fa-fw"></i><span>Settings</span></a></li>
+        <li class="active"><a href="./profile.html"><i class="fa-regular fa-user fa-fw"></i><span>Profile</span></a></li>
+        <li><a href="./projects.html"><i class="fa-solid fa-diagram-project fa-fw"></i><span>Projects</span></a></li>
+        <li><a href="./courses.html"><i class="fa-solid fa-graduation-cap fa-fw"></i><span>Courses</span></a></li>
+        <li><a href="./friends.html"><i class="fa-regular fa-circle-user fa-fw"></i><span>Friends</span></a></li>
+        <li><a href="./files.html"><i class="fa-regular fa-file fa-fw"></i><span>Files</span></a></li>
+        <li><a href="./plans.html"><i class="fa-regular fa-credit-card fa-fw"></i><span>Plans</span></a></li>
+      </ul>
+    </div>
+    <header>
+      <div class="search">
+        <input type="search" id="search-input" placeholder="Type A Keyword">
+      </div>
+      <div class="icons"><span class="notifications"><i class="fa-regular fa-bell fa-lg"></i></span><img src="Assets/imgs/avatar.png" alt="profile picture"></div>
+    </header>
+    <main>
+      <h1 class="page-heading">Profile</h1>
+      <!-- Profile Content-->
+      <div class="profile-content">
+        <!-- Profile Details Component-->
+        <div class="box profile-details">
+          <!-- Profile Info-->
+          <div class="profile-info">
+            
+            <img src="./Assets/imgs/avatar.png" alt="profile image">
+            <h3>Seif Abd Al-Azem</h3>
+            <p>Level 20</p>
+            <div></div>
+            <div class="rate">
+              
+              <i class="fa-solid fa-star orange-c fs-13"></i>
+              <i class="fa-solid fa-star orange-c fs-13"></i>
+              <i class="fa-solid fa-star orange-c fs-13"></i>
+              <i class="fa-solid fa-star orange-c fs-13"></i>
+              <i class="fa-solid fa-star orange-c fs-13"></i>
+              
+            </div><span>550 Rating</span>
+          </div>
+          
+          <!-- Profile Settings-->
+          <div class="profile-settings">
+            
+            <!-- General Information -->
+            <div class="profile-setting">
+              <p>General Information</p>
+              <div>
+                <p><span>Full Name: </span>Seif Ahmed</p>
+                <p><span>Gender: </span>Male</p>
+                <p><span>Country: </span>Egypt</p>
+              </div>
+              <div class="toggle">
+                <label>
+                  <input class="toggle-checkbox" type="checkbox" title="checkbox" checked>
+                  <div class="toggle-switch"></div>
+                </label>
+              </div>
+            </div>
+            
+            <!-- Personal Information -->
+            <div class="profile-setting">
+              <p>Personal Information</p>
+              <div>
+                <p><span>Email: </span>o@nn.sa</p>
+                <p><span>Phone: </span>019123456789</p>
+                <p><span>Date Of Birth: </span>25/10/1982</p>
+              </div>
+              <div class="toggle">
+                <label>
+                  <input class="toggle-checkbox" type="checkbox" title="checkbox" checked>
+                  <div class="toggle-switch"></div>
+                </label>
+              </div>
+            </div>
+            
+            <!-- Job Information -->
+            <div class="profile-setting">
+              <p>Job Information</p>
+              <div>
+                <p><span>Title: </span>Full Stack Developer</p>
+                <p><span>Programming Language: </span>Python</p>
+                <p><span>Years Of Experience: </span>15+</p>
+              </div>
+              <div class="toggle">
+                <label>
+                  <input class="toggle-checkbox" type="checkbox" title="checkbox" checked>
+                  <div class="toggle-switch"></div>
+                </label>
+              </div>
+            </div>
+            
+            <!-- Payment Information -->
+            <div class="profile-setting">
+              <p>Payment Information</p>
+              <div>
+                <p><span>Payment Method: </span>Paypal</p>
+                <p><span>Email: </span>email@website.com</p>
+                <p><span>Subscription: </span>Monthly</p>
+              </div>
+              <div class="toggle">
+                <label>
+                  <input class="toggle-checkbox" type="checkbox" title="checkbox" checked>
+                  <div class="toggle-switch"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <!-- Other Information-->
+        <div class="other-info">
+          <!-- Skills Box-->
+          <div class="box skills">
+            <h2 class="widget-heading">My Skills</h2>
+            <p class="widget-desc">Complete Skills List</p>
+            <ul>
+              <li>
+                
+                <span class="btn-shape">HTML</span>
+                
+                <span class="btn-shape">Pugjs</span>
+                
+                <span class="btn-shape">HAML</span>
+              </li>
+              <li>
+                
+                <span class="btn-shape">CSS</span>
+                
+                <span class="btn-shape">SASS</span>
+                
+                <span class="btn-shape">Stylus</span>
+              </li>
+              <li>
+                
+                <span class="btn-shape">JavaScript</span>
+                
+                <span class="btn-shape">TypeScript</span>
+              </li>
+              <li>
+                
+                <span class="btn-shape">Vuejs</span>
+                
+                <span class="btn-shape">Reactjs</span>
+              </li>
+              <li>
+                
+                <span class="btn-shape">Jest</span>
+                
+                <span class="btn-shape">Jasmine</span>
+              </li>
+              <li>
+                
+                <span class="btn-shape">PHP</span>
+                
+                <span class="btn-shape">Laravel</span>
+              </li>
+              <li>
+                
+                <span class="btn-shape">Python</span>
+                
+                <span class="btn-shape">Django</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Latest Activities Box-->
+          <div class="box activities">
+            <h2 class="widget-heading">Latest Activities</h2>
+            <p class="widget-desc">Latest Activities Done By The User</p>
+            
+            <div class="latest-activities">
+              <div class="activity"><img src="./Assets/imgs/activity-01.png" alt="activity-01">
+                <div class="activity-head"><span>Store</span>
+                  <p>Bought The Mastering Python Course</p>
+                </div>
+                <div class="activity-time"><span>18:10</span><span>Yesterday</span></div>
+              </div>
+              <div class="activity"><img src="./Assets/imgs/activity-02.png" alt="activity-02">
+                <div class="activity-head"><span>Academy</span>
+                  <p>Got The PHP Certificate</p>
+                </div>
+                <div class="activity-time"><span>16:05</span><span>Yesterday</span></div>
+              </div>
+              <div class="activity"><img src="./Assets/imgs/activity-03.png" alt="activity-03">
+                <div class="activity-head"><span>Badges</span>
+                  <p>Unlocked The 10 Skills Badge</p>
+                </div>
+                <div class="activity-time"><span>18:05</span><span>Yesterday</span></div>
+              </div>
+              <div class="activity"><img src="./Assets/imgs/activity-01.png" alt="activity-01">
+                <div class="activity-head"><span>Store</span>
+                  <p>Bought The Typescript Course</p>
+                </div>
+                <div class="activity-time"><span>12:05</span><span>Yesterday</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+@use "../helpers/variables" as *;
+@use 'sass:math';
+
+// Start Card One Style
+
+.cards .card {
+    width: 50%;
+}
+
+.card {
+    display: block;
+    padding: $base-padding;
+    border: $base-border-thickness solid #ddd;
+    box-shadow: $base-box-shadow;
+    border-radius: math.div($base-border-radius, 4);
+
+    .card-title {
+        font-size: $base-font-size;
+        padding-bottom: $base-padding;
+        font-weight: bold;
+    }
+    .card-body {
+        font-size: $base-font-size;
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Start Card Two Style
+
+.cards .card-two-container {
+    width: 25%;
+}
+
+
+.card-two-container {
+    img {
+        border: 1px solid #ddd;
+    }
+    .cardTwo {
+        margin-top: -8px;
+        border: 1px solid #ddd;
+        padding: 20px 10px;
+        border-top: 0;
+        border-radius: 0 0 12px 12px;
+        position: relative;
+        h2 {
+            font-size: 22px;
+            color: blueviolet;
+        }
+        p {
+            margin: 15px 0;
+        }
+        .card-btn {
+            text-align: end;
+            a {
+                padding: 10px;
+                text-transform: uppercase;
+                transition-duration: 0.3s;
+                border: none;
+                border: 1px solid #ddd;
+                color: #333;
+                &:hover {
+                    background-color: blueviolet;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+// Math methods in SASS By Debug You can watch these values in compilation time
+
+// @debug math.div(10, 3);
+// @debug math.$pi;
+// @debug math.floor(2.6);
+// @debug math.max(1px, 20px, 15px, 12px);

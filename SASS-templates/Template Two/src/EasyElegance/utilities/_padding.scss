@@ -1,0 +1,43 @@
+@use "../helpers/variables" as *;
+
+$padding-types: (
+    "padding": "p",
+    "padding-top": "pt",
+    "padding-right": "pr",
+    "padding-bottom": "pb",
+    "padding-left": "pl",
+    "padding-x": "px",
+    "padding-y": "py"
+);
+
+$padding-values: (
+    "0": 0,
+    "1": $base-padding,
+    "2": $base-padding * 2,
+    "3": $base-padding * 4,
+    "4": $base-padding * 6,
+    "5": $base-padding * 8,
+    "auto": auto,
+);
+
+@mixin generate-padding-classes($property, $prefix) {
+    @each $key, $value in $padding-values {
+        @if ($prefix == "py") {
+            .#{$prefix}-#{$key}{
+                padding: $value 0;
+            }
+        } @else if ($prefix == "px")  {
+            .#{$prefix}-#{$key}{
+                padding: 0 $value;
+            }
+        } @else {
+            .#{$prefix}-#{$key}{
+                #{$property}: $value;
+            }
+        }
+    }
+}
+
+@each $property, $prefix in $padding-types {
+    @include generate-padding-classes($property, $prefix);
+}

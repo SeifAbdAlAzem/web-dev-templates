@@ -1,0 +1,54 @@
+include includes/variables.pug
+
+doctype html
+html(lang="en")
+    head
+        include includes/meta.pug
+        title Pricing Plans
+        include includes/styles.pug
+    body
+        .sidebar
+                p(class= "logo") Elzero
+                ul
+                    each item, index in listItems
+                        li(class=index === 7 ? 'active' : '')
+                            a(href= item === 'Dashboard' ?  `${htmlFilesPath}index.html` : `${htmlFilesPath}${item.toLowerCase()}.html`)
+                                i(class=`${icons[index]} fa-fw`)
+                                span=item
+        include includes/header.pug
+        main
+            h1(class="page-heading") Pricing Plans
+            .grid-two.plans
+                each plan in pricingPlans
+                    .box.plan
+                        .plan-price(class=plan.name.toLowerCase())
+                            h2= plan.name
+                            p
+                                sup $
+                                | #{plan.price}
+                        ul
+                            if plan.name === 'Free'
+                                each feature, index in plan.features
+                                    li
+                                        if index < 3
+                                            i.fa-solid.fa-check.fa-fw.yes
+                                        else
+                                            i.fa-solid.fa-xmark.fa-fw
+                                        |  #{feature}
+                            else if plan.name === 'Basic'
+                                each feature, index in plan.features
+                                    li
+                                        if index < 6
+                                            i.fa-solid.fa-check.fa-fw.yes
+                                        else
+                                            i.fa-solid.fa-xmark.fa-fw
+                                        |  #{feature}
+                            else if plan.name === 'Premium'
+                                each feature in plan.features
+                                    li
+                                        i.fa-solid.fa-check.fa-fw.yes
+                                        |  #{feature}
+                        if plan.currentPlan
+                            span This Is Your Current Plan
+                        else
+                            span.btn-shape(class=plan.btnClass)= plan.btnText

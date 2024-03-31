@@ -1,0 +1,18 @@
+@use "../helpers/variables" as *;
+@use "../helpers/extends" as *;
+
+main {
+    @extend %main-width;
+    background-color: var(--background-color);
+    padding: 20px 0;
+}
+
+.grid-two {
+    @extend %grid-display;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+}
+
+.grid-three {
+    @extend %grid-display;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}

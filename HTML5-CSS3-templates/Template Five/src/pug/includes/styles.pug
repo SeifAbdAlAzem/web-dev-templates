@@ -1,0 +1,12 @@
+include ./variables.pug
+
+//- Include CSS files using variables
+each file in cssFiles
+    |
+    <!-- #{file === "all.min.css" ? "Font Awesome" : file.split(".")[0]} CSS file -->
+    |
+    link(rel="stylesheet", href= cssFilesPath + file)
+// Google Font Link "Open Sans"
+link(rel="preconnect", href="https://fonts.googleapis.com")
+link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap")

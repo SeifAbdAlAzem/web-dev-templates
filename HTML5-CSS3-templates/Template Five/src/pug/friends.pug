@@ -1,0 +1,46 @@
+include includes/variables.pug
+
+doctype html
+html(lang="en")
+    head
+        include includes/meta.pug
+        title My Friends
+        include includes/styles.pug
+    body
+        .sidebar
+                p(class= "logo") Elzero
+                ul
+                    each item, index in listItems
+                        li(class=index === 5 ? 'active' : '')
+                            a(href= item === 'Dashboard' ?  `${htmlFilesPath}index.html` : `${htmlFilesPath}${item.toLowerCase()}.html`)
+                                i(class=`${icons[index]} fa-fw`)
+                                span=item
+        include includes/header.pug
+        main
+            h1(class="page-heading") Friends
+
+            .grid-three.friends
+                each friendBox in friendsBoxs
+                    .box.friend
+                        .contact
+                            i.fa-solid.fa-phone
+                            i.fa-regular.fa-envelope
+
+                        .friend-bio
+                            img(src=`${imgsPath}${friendBox.friendImg}`, alt=`${friendBox.friendImg.split(".")[0]}`)
+                            h4= friendBox.friendName
+                            p= friendBox.job
+
+                        .friend-stats
+                            each stat, index in friendBox.stats.data
+                                p
+                                    i(class=`${friendBox.stats.icons[index]}`)
+                                    | #{stat}
+                            if friendBox.vip
+                                span VIP
+
+                        .friend-details
+                            span= `Joined ${friendBox.joinedDate}`
+                            div
+                                span.btn-shape.blue-bk Profile
+                                span.btn-shape.red-bk Remove

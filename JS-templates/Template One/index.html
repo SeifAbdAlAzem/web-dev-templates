@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Project</title>
+    <!-- Normalize CSS File -->
+    <link rel="stylesheet" href="Assets/css/normalize.css">
+    <!-- Font Awesome CSS File -->
+    <link rel="stylesheet" href="Assets/css/all.min.css">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="Assets/css/main.css">
+    <!-- Colors CSS File -->
+    <link rel="stylesheet" href="Assets/css/colors.css">
+    <!-- Google Fonts "Open Sans" -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap">
+    <!-- Google Fonts "Cairo" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Start header Section -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h2 lang="en" data-i18n="LogoName">Special Design</h2>
+                </div>
+                <span class="nav-btn" id="nav-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+                <ul class="nav-bar toggle-menu">
+                    <li><a href="#About" lang="en" data-i18n="About">About</a></li>
+                    <li><a href="#Skills" lang="en" data-i18n="Skills">Skills</a></li>
+                    <li><a href="#Gallery" lang="en" data-i18n="Gallery">Gallery</a></li>
+                    <li><a href="#Timeline" lang="en" data-i18n="Timeline">Timeline</a></li>
+                    <li><a href="#Features" lang="en" data-i18n="Features">Features</a></li>
+                    <li><a href="#Testimonials" lang="en" data-i18n="Testimonials">Testimonials</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Start Main Section -->
+    <main>
+        <!-- Start Banner Section -->
+        <section class="banner" id="banner">
+            <div class="container">
+                <div class="settings" id="settings">
+                    <span class="setting-btn" id="setting-btn">
+                        <i class="fa-solid fa-gear"></i>
+                    </span>
+                    <div class="settings-controls">
+                        <div class="settings-control">
+                            <h2 lang="en" data-i18n="Colors">Colors</h2>
+                            <div class="pick-colors">
+                                <span class="active" data-color="#ff9800"></span>
+                                <span data-color="#e91e63"></span>
+                                <span data-color="#009688"></span>
+                                <span data-color="#03a9f4"></span>
+                                <span data-color="#4caf50"></span>
+                            </div>
+                        </div>
+                        <div class="settings-control random-bg">
+                            <h2 lang="en" data-i18n="RandomBackgrounds">Random Backgrounds</h2>
+                            <div class="buttons">
+                                <button class="active" type="button" lang="en" data-i18n="Yes">Yes</button>
+                                <button type="button" lang="en" data-i18n="No">No</button>
+                            </div>
+                        </div>
+                        <div class="settings-control ShowBullets">
+                            <h2 lang="en" data-i18n="ShowBullets">Show Bullets</h2>
+                            <div class="buttons">
+                                <button class="active" type="button" lang="en" data-i18n="Yes">Yes</button>
+                                <button type="button" lang="en" data-i18n="No">No</button>
+                            </div>
+                        </div>
+                        <div class="settings-control change-language">
+                            <h2 lang="en" data-i18n="ChangeLanguage">Change Language</h2>
+                            <div class="buttons">
+                                <button class="active" type="button" lang="en" data-i18n="en">English</button>
+                                <button type="button" lang="en" data-i18n="ar">Arabic</button>
+                            </div>
+                        </div>
+                        <button class="reset" id="reset" type="button" lang="en" data-i18n="ResetOptions">Reset Options</button>
+                    </div>
+                </div>
+
+                <div class="welcome-msg">
+                    <h1 lang="en" data-i18n="WelcomeMsgHeading">We Are <span>Creative</span> Agency</h1>
+                    <p lang="en" data-i18n="WelcomeMsgContent">Our Agency offers significant services for you without any cost</p>
+                </div>
+
+                <div class="bullets" id="bullets">
+                    <a href="#About">
+                        <span lang="en" data-i18n="About">About Us</span>
+                    </a>
+                    <a href="#Skills">
+                        <span lang="en" data-i18n="Skills">Our Skills</span>
+                    </a>
+                    <a href="#Gallery">
+                        <span lang="en" data-i18n="Gallery">Our Gallery</span>
+                    </a>
+                    <a href="#Timeline">
+                        <span lang="en" data-i18n="Timeline">Timeline</span>
+                    </a>
+                    <a href="#Features">
+                        <span lang="en" data-i18n="Features">Our Features</span>
+                    </a>
+                    <a href="#Testimonials">
+                        <span lang="en" data-i18n="Testimonials">Testimonials</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start About Us Section -->
+        <section class="about-us" id="About">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-msg">
+                        <h2 lang="en" data-i18n="About">About Us</h2>
+                        <p lang="en" data-i18n="AboutUsMsg">Welcome to Special Design! We are a passionate team dedicated to delivering exceptional services to our valued customers. With a focus on innovation, quality, and customer satisfaction, we strive to exceed expectations in every aspect of our business.</p>
+                    </div>
+                    <div class="about-img">
+                        <img src="Assets/imgs/about-us.jpg" alt="about-us">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Skills Section -->
+        <section class="our-skills" id="Skills">
+            <div class="container">
+                <h2 class="section-heading" lang="en" data-i18n="Skills">Our Skills</h2>
+                <div class="skills-progress">
+                    <div class="skill">
+                        <span>HTML</span>
+                        <div class="progress">
+                            <span data-target="30%"></span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>CSS</span>
+                        <div class="progress">
+                            <span data-target="60%"></span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>JavaScript</span>
+                        <div class="progress">
+                            <span data-target="70%"></span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Python</span>
+                        <div class="progress">
+                            <span data-target="40%"></span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>PHP</span>
+                        <div class="progress">
+                            <span data-target="50%"></span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>MySQL</span>
+                        <div class="progress">
+                            <span data-target="80%"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Gallery Section -->
+        <section class="gallery" id="Gallery">
+            <div class="container">
+                <h2 class="section-heading"  lang="en" data-i18n="Gallery">Our Gallery</h2>
+                <div class="gallery-imgs">
+                    <div class="gallery-img">
+                        <img src="Assets/imgs/01.jpg" alt="Image One">
+                    </div>
+                    <div class="gallery-img">
+                        <img src="Assets/imgs/02.jpg" alt="Image Two">
+                    </div>
+                    <div class="gallery-img">
+                        <img src="Assets/imgs/03.jpg" alt="Image Three">
+                    </div>
+                    <div class="gallery-img">
+                        <img src="Assets/imgs/04.jpg" alt="Image Four">
+                    </div>
+                    <div class="gallery-img">
+                        <img src="Assets/imgs/05.jpg" alt="Image Five">
+                    </div>
+                    <div class="gallery-img">
+                        <img src="Assets/imgs/06.png" alt="Image Six">
+                    </div>
+                    <div class="gallery-img">
+                        <img src="Assets/imgs/07.jpg" alt="Image Seven">
+                    </div>
+                    <div class="gallery-img">
+                        <img src="Assets/imgs/08.jpg" alt="Image Eight">
+                    </div>
+                    <div class="gallery-img">
+                        <img src="Assets/imgs/09.jpg" alt="Image Nine">
+                    </div>
+                    <div class="gallery-img">
+                        <img src="Assets/imgs/10.jpg" alt="Image Ten">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Timeline Section -->
+        <section class="timeline" id="Timeline">
+            <div class="container">
+                <div class="season-timeline">
+                    <span lang="en" data-i18n="FirstTimelineDate">2016</span>
+                    <div class="timeline-point">
+                        <h3 lang="en" data-i18n="ProjectTitle">Project Title</h3>
+                        <p lang="en" data-i18n="TimelineContent">Our journey began with a vision. Since then, we have grown into a trusted leader, known for our commitment to excellence and our unwavering dedication to our customers' success.</p>
+                        <span class="point"></span>
+                    </div>
+                    <div class="timeline-point">
+                        <h3 lang="en" data-i18n="ProjectTitle">Project Title</h3>
+                        <p lang="en" data-i18n="TimelineContent">Our journey began with a vision. Since then, we have grown into a trusted leader, known for our commitment to excellence and our unwavering dedication to our customers' success.</p>
+                        <span class="point"></span>
+                    </div>
+                    <span lang="en" data-i18n="SecondTimelineDate">2018</span>
+                    <div class="timeline-point">
+                        <h3 lang="en" data-i18n="ProjectTitle">Project Title</h3>
+                        <p lang="en" data-i18n="TimelineContent">Our journey began with a vision. Since then, we have grown into a trusted leader, known for our commitment to excellence and our unwavering dedication to our customers' success.</p>
+                        <span class="point"></span>
+                    </div>
+                    <div class="timeline-point">
+                        <h3 lang="en" data-i18n="ProjectTitle">Project Title</h3>
+                        <p lang="en" data-i18n="TimelineContent">Our journey began with a vision. Since then, we have grown into a trusted leader, known for our commitment to excellence and our unwavering dedication to our customers' success.</p>
+                        <span class="point"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Features Section -->
+        <section class="features" id="Features">
+            <div class="container">
+                <h2 class="section-heading"  lang="en" data-i18n="Features">Our Features</h2>
+                <div class="features-boxs">
+                    <div class="feature-box">
+                        <img src="Assets/imgs/programming.svg" alt="Development">
+                        <h3 lang="en" data-i18n="Development">Development</h3>
+                        <p lang="en" data-i18n="FeatureContent">We are professional marketeers, we will do anything you imagine in no time.</p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="Assets/imgs/advertising.svg" alt="Marketing">
+                        <h3 lang="en" data-i18n="Marketing">Marketing</h3>
+                        <p lang="en" data-i18n="FeatureContent">We are professional marketeers, we will do anything you imagine in no time.</p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="Assets/imgs/hosting-icon.svg" alt="Hosting">
+                        <h3 lang="en" data-i18n="Hosting">Hosting</h3>
+                        <p lang="en" data-i18n="FeatureContent">We are professional marketeers, we will do anything you imagine in no time.</p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="Assets/imgs/mobile-app.svg" alt="Mobile App">
+                        <h3 lang="en" data-i18n="MobileDevelop">Mobile Develop</h3>
+                        <p lang="en" data-i18n="FeatureContent">We are professional marketeers, we will do anything you imagine in no time.</p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="Assets/imgs/graphic-design.svg" alt="Cloud and Servers">
+                        <h3 lang="en" data-i18n="CloudAndServers">Cloud and Servers</h3>
+                        <p lang="en" data-i18n="FeatureContent">We are professional marketeers, we will do anything you imagine in no time.</p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="Assets/imgs/web-design.svg" alt="SEO">
+                        <h3 lang="en" data-i18n="SEO">SEO</h3>
+                        <p lang="en" data-i18n="FeatureContent">We are professional marketeers, we will do anything you imagine in no time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Testimonials Section -->
+        <section class="testimonials" id="Testimonials">
+            <div class="container">
+                <h2 lang="en" data-i18n="Testimonials">Testimonials</h2>
+                <div class="testimonials-boxs">
+                    <div>
+                        <p lang="en" data-i18n="TestimonialMsg">Iam very happy with the product its amazing and i recieve it very fast and the price was amazing.</p>
+                        <div class="testimonial-details">
+                            <img src="Assets/imgs/testimonial-01.png" alt="testimonial-1">
+                            <div class="info">
+                                <h3 lang="en" data-i18n="TestimonialName">Mohamed Younes</h3>
+                                <span lang="en" data-i18n="TestimonialWork">CEO At Company</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p lang="en" data-i18n="TestimonialMsg">Iam very happy with the product its amazing and i recieve it very fast and the price was amazing.</p>
+                        <div class="testimonial-details">
+                            <img src="Assets/imgs/testimonial-02.png" alt="testimonial-2">
+                            <div class="info">
+                                <h3 lang="en" data-i18n="TestimonialName">Mohamed Younes</h3>
+                                <span lang="en" data-i18n="TestimonialWork">CEO At Company</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p lang="en" data-i18n="TestimonialMsg">Iam very happy with the product its amazing and i recieve it very fast and the price was amazing.</p>
+                        <div class="testimonial-details">
+                            <img src="Assets/imgs/testimonial-03.png" alt="testimonial-3">
+                            <div class="info">
+                                <h3 lang="en" data-i18n="TestimonialName">Mohamed Younes</h3>
+                                <span lang="en" data-i18n="TestimonialWork">CEO At Company</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Contact Us Section -->
+        <section class="contact-us" id="Contact">
+            <div class="overlay"></div>
+            <div class="container">
+                <h2 class="section-heading" lang="en" data-i18n="Contact">Contact Us</h2>
+                <form action="">
+                    <div class="inputs">
+                        <input type="text" placeholder="Your Name" lang="en" data-i18n="NameInputPlaceHolder">
+                        <input type="tel" placeholder="Your Phone Number" lang="en" data-i18n="PhoneNumberInputPlaceHolder">
+                        <input type="email" placeholder="Your Email" lang="en" data-i18n="EmailInputPlaceHolder">
+                        <input type="text" placeholder="Subject" lang="en" data-i18n="SubjectInputPlaceHolder">
+                    </div>
+                    <div>
+                        <textarea name="message" id="message" placeholder="Your Message" lang="en" data-i18n="MsgTxetAreaPlaceHolder"></textarea>
+                        <input class="submit" type="submit" value="Send" lang="en" data-i18n="SubmitBtnValue">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Start Footer Section -->
+    <footer>
+        <div class="container">
+            <p lang="en" data-i18n="CopyRightText">Inspired From <span>Osama Elzero</span> And Created With Love By <span>Seif Abd Al-azem</span></p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome JS File -->
+    <script src="Assets/js/all.min.js"></script>
+    <!-- Main JS File -->
+    <script src="Assets/js/app.js"></script>
+</body>
+</html>

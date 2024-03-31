@@ -1,0 +1,17 @@
+{
+  "name": "project-two",
+  "version": "1.0.0",
+  "description": "- We can't just hook up a SASS file to our html pages; it will not work; so, We need to process SASS into CSS file before it works in a browser to do that we will use a task runner called Gulp.\r - First We need to install nodeJs because we will be using npm \"node package manager\" to install gulp and some plugins into our project.\r - To install nodejs We need to go to nodejs.org and click the download button \"Recommended to download the current\".",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-purgecss": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.71.1"
+  }
+}

@@ -1,0 +1,35 @@
+include includes/variables.pug
+
+doctype html
+html(lang="en")
+    head
+        include includes/meta.pug
+        title My Courses
+        include includes/styles.pug
+    body
+        .sidebar
+            p(class= "logo") Elzero
+            ul
+                each item, index in listItems
+                    li(class=index === 4 ? 'active' : '')
+                        a(href= item === 'Dashboard' ?  `${htmlFilesPath}index.html` : `${htmlFilesPath}${item.toLowerCase()}.html`)
+                            i(class=`${icons[index]} fa-fw`)
+                            span=item
+        include includes/header.pug
+        main
+            h1(class="page-heading") Courses
+            .grid-three.courses
+                each course in coursesBoxs
+                    .box.course
+                        img(src=`${imgsPath}${course.teamImg}`, alt=course.teamImg.split(".")[0])
+                        img(src=`${imgsPath}${course.courseImg}`, alt=course.courseImg.split(".")[0])
+                        .course-content
+                            h4= course.courseTitle
+                            p= course.courseDesc
+
+                        span.btn-shape.blue-bk Course Info
+                        .course-stats
+                            span
+                                i.fa-regular.fa-user
+                                | #{course.registers}
+                            span= course.price

@@ -1,0 +1,8 @@
+@use "./variables" as *;
+
+.section-heading {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 32px;
+    margin-bottom: 25px;
+}

@@ -1,0 +1,140 @@
+@use "./variables" as *;
+@use "sass:math";
+
+// Button Mixin
+
+@mixin btn($bg-color: #e2e2e2) {
+    cursor: pointer;
+    border: none;
+    padding: $base-padding $base-padding * 2;
+    border-radius: $base-border-radius;
+    background-color: $bg-color;
+}
+
+// flex-center Mixin
+
+@mixin flex-center($justify-content, $direction) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+// Light and Dark Theme Mixin
+
+@mixin theme($light-theme: true) {
+    @if $light-theme {
+        background-color: lighten($primary-color: #000000, $amount: 100%);
+        color: darken($color: #000000, $amount: 100%);
+    }
+}
+
+// Grid Mixin
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 1.5rem;
+}
+
+// Arrow Mixin
+
+@mixin arrow($direction) {
+    content: "";
+    position: absolute;
+    border: 20px solid transparent;
+    @if $direction == top {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -40px;
+        border-bottom-color: red;
+    } @else if $direction == right {
+        top: 50%;
+        transform: translateY(-50%);
+        right: -40px;
+        border-left-color: red;
+    } @else if $direction == bottom {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -40px;
+        border-top-color: red;
+    } @else if $direction == left {
+        top: 50%;
+        transform: translateY(-50%);
+        left: -40px;
+        border-right-color: red;
+    } @else {
+        @error "This Direction #{$direction} Is Not Valid";
+    }
+}
+
+// Circle Mixin
+
+@mixin circle($dimensions) {
+    border-radius: 50%;
+    width: $dimensions;
+    height: $dimensions;
+}
+
+// Overlay Mixin
+
+@mixin overlay($color, $opacity) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color, $opacity);
+}
+
+// Animations Mixin
+
+@mixin keyF($anim-name) {
+    @-webkit-keyframes #{$anim-name} {
+        @content;
+    }
+    @keyframes #{$anim-name} {
+        @content;
+    }
+}
+
+// Breakpoints Mixin
+
+@mixin breakpoints($point) {
+    $query: map-get($breakpoints, $point);
+    @if $query {
+        @media #{$query} {
+            @content;
+        }
+    }
+}
+
+// Grid Mixin
+
+@mixin generate-breakpoints-column-classes($point, $columns) {
+    @each $breakpoint, $query in $breakpoints {
+        @if $breakpoint == $point {
+            @media #{$query} {
+                @for $i from 1 through $columns {
+                    .col-#{$i}-#{$breakpoint} {
+                        @if($i == 3 and $breakpoint == "lg") {
+                            width: percentage(math.div($i, $grid-columns+1));
+                        } @else {
+                            width: percentage(math.div($i, $grid-columns));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin generate-column-classes($columns) {
+    @each $breakpoint, $query in $breakpoints {
+        @for $i from 1 through $columns {
+            .col-#{$i}-#{$breakpoint} {
+                width: percentage(math.div($i, $grid-columns));
+            }
+        }
+    }
+}

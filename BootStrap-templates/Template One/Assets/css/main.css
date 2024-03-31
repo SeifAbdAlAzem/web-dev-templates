@@ -1,0 +1,195 @@
+/* Global Rules */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Rebeated Components */
+
+.section-heading::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+/* Start Header Section */
+
+.navbar {
+    background-color: #0000009c !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #ffc017;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.offcanvas-backdrop {
+    z-index: 1;
+}
+
+.offcanvas.offcanvas-top {
+    top: 20%;
+    left: 25%;
+}
+
+/* Start Main Section */
+
+/* Start Banner Section */
+
+.carousel-inner .carousel-item,
+.about .about-content .row div {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.carousel-inner .carousel-item::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+}
+
+.carousel-inner .carousel-item:first-child {
+    background-image: url(../imgs/slider-01.jpg);
+}
+
+.carousel-inner .carousel-item:nth-child(2) {
+    background-image: url(../imgs/slider-02.jpg);
+}
+
+.carousel-inner .carousel-item:last-child {
+    background-image: url(../imgs/slider-03.jpg);
+}
+
+/* Start Portfolio Section */
+
+.projects-boxs .card img {
+    height: 180px;
+}
+
+.projects-boxs .card .product-image button {
+    top: 125%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.5s ease;
+}
+
+.projects-boxs .card .product-image:hover button {
+    top: 50%;
+}
+
+.projects-boxs .card .product-image::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    background-color: #c4753091;
+    transition-duration: 0.5s;
+}
+
+.projects-boxs .card .product-image:hover::after {
+    top: 0;
+}
+
+/* Start About Section */
+
+.about .about-content .row {
+    height: 200px;
+}
+
+.about .about-content .row:first-of-type > .col {
+    background-image: url(../imgs/product-01.jpg);
+}
+
+.about .about-content .row:first-of-type .col-6 {
+    background-image: url(../imgs/product-02.jpg);
+}
+
+.about .about-content .row:first-of-type .col:last-child {
+    background-image: url(../imgs/product-03.jpg);
+}
+
+.about .about-content .row:last-of-type .col-9 {
+    background-image: url(../imgs/product-04.jpg);
+}
+
+.about .about-content .row:last-of-type .col {
+    background-image: url(../imgs/product-05.jpg);
+}
+
+/* Start Sponsors Section */
+
+.sponsors .container::before,
+.sponsors .container::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 250px;
+    height: 100%;
+}
+
+.sponsors .container::before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.sponsors .container::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.sponsors .logos {
+    -webkit-animation: scroll 30s linear infinite alternate;
+    animation: scroll 30s linear infinite alternate;
+}
+
+.sponsors .logos:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Start Feedback Section */
+
+.accordion-button:focus {
+    box-shadow: none;
+}

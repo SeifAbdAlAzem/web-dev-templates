@@ -1,0 +1,41 @@
+// Global Rules, Base & layout
+// Reset Style
+@use "./layout/reset";
+// Grid System
+@use "./layout/grid";
+
+// components (button, card, navbar etc)
+// Nav Component
+@use "./components/nav";
+// Sidebar Component
+@use './components/sidebar';
+// Page Heading Component
+@use './components/pageHead';
+// Box Component
+@use './components/box';
+// Toogle Component
+@use './components/toggle';
+
+// Pages (dashboard, settings, profile etc)
+// Dashboard Page
+@use './pages/dashboard';
+// Settings Page
+@use './pages/settings';
+// Profile Page
+@use './pages/profile';
+// Projects Page
+@use './pages/projects';
+// Courses Page
+@use './pages/courses';
+// Friends Page
+@use './pages/friends';
+// Files Page
+@use './pages/files';
+// Plans Page
+@use './pages/plans';
+
+// Animations
+@use './helpers/animations';
+
+// Responsive Design
+@use './layout/responsive';

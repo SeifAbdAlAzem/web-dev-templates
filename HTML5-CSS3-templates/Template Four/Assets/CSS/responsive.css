@@ -1,0 +1,155 @@
+@media (max-width: 676px) {
+    .parent-flex {
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    header {
+        height: 18vh;
+        padding: 20px 0;
+    }
+    header .top-bar,
+    .banner .banner-content {
+        flex-direction: column;
+    }
+    header .top-bar nav .menu-btn {
+        display: block;
+    }
+    header .top-bar nav .main-nav {
+        display: none;
+    }
+    .banner .banner-content .welcome-msg {
+        text-align: center;
+    }
+    .banner .banner-content .welcome-msg h1  {
+        font-size: 30px;
+    }
+    p {
+        font-size: 18px !important;
+    }
+    .articles-boxes article,
+    .features .features-boxes .feature-box,
+    .testimonials .testimonials-boxes .testimonial-box,
+    .services-boxes .service,
+    .skills-content > img,
+    .how-content > img,
+    .how-content .work-steps,
+    .pricing .pricing-plans .plan,
+    .discount .discount-info img,
+    .discount .request-discount form,
+    .latest-event img,
+    .latest-event .count-down .date,
+    .team .team-members .team-member  {
+        width: 100%;
+    }
+    .testimonials .testimonials-boxes {
+        margin-top: 30%;
+    }
+    .testimonials .testimonials-boxes .testimonial-box {
+        padding: 45px 20px;
+    }
+    .testimonials .testimonials-boxes .testimonial-box:hover img {
+        right: 100%;
+        transform: translateX(100%);
+    }
+    .team .team-members .team-member .profile {
+        width: calc(100% + 20px);
+        margin-left: -20px;
+    }
+    .team .team-members .team-member .info {
+        padding-right: 0;
+    }
+    .services-boxes {
+        margin-top: 30px;
+    }
+    .services-boxes .service .service-details p::after {
+        left: 34%;
+    }
+    .how-content .work-steps .work-step {
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px 15px;
+    }
+    .how-content .work-steps .work-step img {
+        margin: 0;
+    }
+    .how-content .work-steps .work-step .work-step-content {
+        text-align: center;
+        margin-top: 15px;
+    }
+    .dots {
+        height: 130px;
+        width: 160px;
+    }
+    .latest-event {
+        margin-top: 40px;
+    }
+    .latest-event .count-down .date .unit  {
+        width: 50px;
+    }
+    .latest-event .count-down .date .unit span:first-child {
+        font-size: 24px;
+    }
+    .latest-event .count-down .date .unit span:last-child {
+        font-size: 11px;
+    }
+    .subscribe {
+        margin-bottom: 15px;
+    }
+    .subscribe form {
+        width: 100%;
+        flex-direction: column;
+    }
+    .subscribe form input[type="email"] {
+        border-radius: 30px 30px 0 0;
+    }
+    .subscribe form input[type="submit"] {
+        border-radius: 0 0 30px 30px;
+    }
+    .pricing .pricing-plans .plan:nth-child(2) {
+        transform: translateX(0);
+    }
+    .pricing .pricing-plans .plan:nth-child(2) p {
+        right: 5px;
+    }
+    .top-videos,
+    .discount {
+        flex-direction: column;
+    }
+    .top-videos .video-play p {
+        width: calc(100% - 20px);
+        padding: 10px;
+        font-size: 13px;
+    }
+    .stats h2 {
+        font-size: 30px;
+    }
+    .discount .discount-info {
+        padding: 20px 0;
+    }
+    .discount .request-discount {
+        text-align: center;
+    }
+    .footer-content {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+    .footer-content .company-social h2 {
+        margin: auto;
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+    .footer-content .company-social .social {
+        margin: 20px auto;
+    }
+    .footer-content .footer-gallery img {
+        width: 70px;
+    }
+}
+
+@media (max-width: 676px) {
+    :root {
+        --section-heading-font-size: 18px;
+        --paragrapgh-font-size: 16px;
+        --section-padding: 30px 0;
+    }
+}

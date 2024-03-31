@@ -1,0 +1,130 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+@include breakpoints(xs) {
+    .container {
+        width: 90%;
+    }
+
+    header {
+        nav {
+            .nav-btn {
+                color: $neutral-color;
+                display: block;
+                cursor: pointer;
+            }
+            .nav-bar {
+                display: none;
+                &.open {
+                    background-color: $neutral-color;
+                    padding: 10px;
+                    display: block;
+                    position: absolute;
+                    z-index: 1000;
+                    left: 0;
+                    top: 50px;
+                    width: 100%;
+                    border-radius: 4px;
+                    text-align: left;
+                    li {
+                        color: var(----primary-color);
+                        display: block;
+                        margin: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        .banner {
+            .welcome-msg {
+                width: 92%;
+                left: 17px;
+                transform: translateY(-50%);
+            }
+            .settings {
+                .setting-btn {
+                    top: 18%;
+                }
+            }
+        }
+        .about-us {
+            .about-content {
+                flex-wrap: wrap;
+                justify-content: center;
+                .about-msg {
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+            }
+        }
+        .our-skills {
+            .skills-progress {
+                .skill {
+                    padding: 10px;
+                    flex-direction: column;
+                    span {
+                        margin-bottom: 10px;
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+        .timeline {
+            .season-timeline {
+                .timeline-point {
+                    width: 100%;
+                    left: 0;
+                    span {
+                        display: none;
+                    }
+                    &::after {
+                        display: none;
+                    }
+                    &:nth-of-type(2) {
+                        left: 0;
+                    }
+                }
+            }
+        }
+        .features {
+            .features-boxs {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            }
+        }
+        .testimonials {
+            .testimonials-boxs {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                div {
+                    .testimonial-details {
+                        flex-direction: column;
+                        text-align: center;
+                        padding: 0;
+                        img {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .contact-us {
+            form {
+                flex-direction: column;
+                div {
+                    input {
+                        width: 100%;
+                    }
+                    textarea {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .popup-box {
+        left: 34%;
+    }
+}

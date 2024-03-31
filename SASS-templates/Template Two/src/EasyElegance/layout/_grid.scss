@@ -1,0 +1,38 @@
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+
+
+// base layout classes
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+// grid gaps
+@each $key, $val in $grid-gaps {
+    .gap-#{$key} {
+        gap: $val;
+    }
+    .row-gap-#{$key} {
+        row-gap: $val;
+    }
+    .column-gap-#{$key} {
+        column-gap: $val;
+    }
+    .gap-#{$key} > * {
+        padding: $val;
+    }
+}
+
+// col classes
+@include generate-column-classes($grid-columns);
+
+@include generate-breakpoints-column-classes(xs, $grid-columns);
+@include generate-breakpoints-column-classes(sm, $grid-columns);
+@include generate-breakpoints-column-classes(md, $grid-columns);
+@include generate-breakpoints-column-classes(lg, $grid-columns);

@@ -1,0 +1,47 @@
+:root {
+    --primary-color: #ff9800;
+    --primary-color-hover: var(--primary-color);
+    --primary-color-border: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color-hover);
+}
+
+/* General styles */
+.section-heading,
+header nav .logo h2,
+header nav .nav-bar li:first-child a,
+header nav .nav-bar li a:hover,
+header nav .nav-bar.open li a,
+main .banner .welcome-msg h1 span,
+main .banner .bullets a:hover,
+main .about-us .about-content .about-msg h2,
+main .timeline .season-timeline .timeline-point h3,
+main .testimonials::before,
+footer span,
+.popup-box h3 {
+    color: var(--primary-color);
+}
+
+main .banner .bullets a:hover::before,
+main .banner .bullets a:hover::after,
+main .timeline::before,
+main .timeline .season-timeline span,
+main .timeline .season-timeline .timeline-point::before,
+main .features .features-boxs .feature-box h3::after,
+main .contact-us form div textarea:not(.submit):focus,
+main .contact-us form div input:not(.submit):focus,
+main .contact-us form div .submit,
+.popup-box .close-button {
+    background-color: var(--primary-color);
+}
+
+main .our-skills .skills-progress .skill span:last-of-type::before {
+    background-color: var(--primary-color);
+}
+
+main .contact-us form div textarea:not(.submit):focus,
+main .contact-us form div input:not(.submit):focus {
+    border-bottom: 1px solid var(--primary-color-border);
+}

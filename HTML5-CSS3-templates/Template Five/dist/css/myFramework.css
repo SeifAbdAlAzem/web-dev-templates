@@ -1,0 +1,147 @@
+:root {
+    --background-color: #f1f5f9;
+    --div-bk-colo: #eee;
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+}
+
+/* Start Components */
+
+.center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.between-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-shape {
+    font-size: 13px;
+    padding: 4px 10px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.widget-desc {
+    font-size: 15px;
+    color: var(--grey-color);
+    margin-bottom: 20px;
+}
+
+.widget-heading {
+    margin-bottom: 10px;
+}
+
+.span-btn-style {
+    color: #000;
+}
+
+.active {
+    background-color: #f6f6f6;
+    border-radius: 6px;
+}
+
+/* End Components */
+
+/* Start Padding + Margin */
+
+
+/* End Padding + Margin */
+
+/* Start Width + Height */
+
+
+
+/* End Width + Height */
+
+
+/* Start Border */
+
+/* End Border */
+
+/* Start Font */
+
+.fs-13 {
+    font-size: 13px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-15 {
+    font-size: 15px;
+}
+
+/* End Font */
+
+/* Start Colors */
+
+.blue-c {
+    color: var(--blue-color);
+}
+
+.orange-c {
+    color: var(--orange-color);
+}
+
+.green-color {
+    color: var(--green-color);
+}
+
+.red-color {
+    color: var(--red-color);
+}
+
+.grey-color {
+    color: var(--grey-color);
+}
+
+.dark-color {
+    color: #000;
+}
+
+/* End Colors */
+
+/* Start background color */
+
+.blue-bk {
+    background-color: var(--blue-color);
+}
+
+.alt-blue-bk {
+    background-color: var(--blue-alt-color);
+}
+
+.grey-bk {
+    background-color: var(--div-bk-colo);
+}
+
+.red-bk {
+    background-color: var(--red-color);
+}
+
+.orange-bk {
+    background-color: var(--orange-color);
+}
+
+.green-bk {
+    background-color: var(--green-color);
+}
+
+/* End background color */

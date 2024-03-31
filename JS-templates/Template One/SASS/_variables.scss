@@ -1,0 +1,32 @@
+// Colors Variables
+:root {
+    --primary-color: #ff9800;
+}
+$bg-color: #f5f5f5;
+$black-color: #333;
+$paragraph-color: #666;
+$neutral-color: #fff;
+
+// Font Size Variables
+$base-fs: 16px;
+$fs-lineheight: 2;
+
+// Font Weight Variables
+$fw-300: 300;
+$fw-400: 400;
+$fw-700: 700;
+
+// Padding and Margin Variables
+$base-padding: 10px;
+$base-padding: 10px;
+
+// Border Radius Variables
+$base-border-radius: 12px;
+
+// Breakpoints Variables
+$breakpoints: (
+    xs: "(max-width: 767px)",
+    sm: "(min-width: 768px) and (max-width: 991px)",
+    md: "(min-width: 992px) and (max-width: 1199px)",
+    lg: "(min-width: 1200px)",
+);

@@ -1,0 +1,125 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixins' as *;
+@use '../helpers/extends' as *;
+
+// Files Style
+.files-content {
+    display: flex;
+    padding: 0 20px;
+    position: relative;
+    .files {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 0 20px 0 0;
+        width: calc(100% - 260px);
+        .file {
+            padding: 10px;
+
+            i {
+                color: $grey-color;
+            }
+
+            .file-head {
+                @include display-flex(space-between, column);
+
+                img {
+                    width: 64px;
+                    height: 64px;
+                    transition-duration: $transition-duration;
+                }
+
+                &:hover img {
+                    transform: rotate(6deg);
+                }
+
+                span {
+                    font-size: 14px;
+                    margin-top: 20px;
+                }
+            }
+
+            > span {
+                display: block;
+                font-size: 13px;
+                color: $grey-color;
+                margin: 10px 0;
+            }
+
+            .file-stats {
+                @include display-flex(space-between);
+                border-top: 1px solid #eee;
+                padding-top: 10px;
+
+                span {
+                    font-size: 13px;
+                    color: $grey-color;
+                }
+            }
+        }
+    }
+
+    // File statistics Style
+    .files-stats {
+        min-width: 260px;
+        position: fixed;
+        right: 20px;
+
+        .files-statistics {
+            @include display-flex();
+            margin: 15px 0;
+            border: 1px solid $border-color;
+            padding: 10px;
+            font-size: 13px;
+            border-radius: 6px;
+
+            i {
+                @include display-flex(center);
+                margin-right: 10px;
+                width: 40px;
+                height: 40px;
+            }
+
+            &.blue i {
+                background-color: rgba(0, 117, 255, 0.2);
+            }
+
+            &.green i {
+                background-color: rgba(34, 197, 94, 0.2);
+            }
+
+            &.red i {
+                background-color: rgba(244, 67, 54, 0.2);
+            }
+
+            &.orange i {
+                background-color: rgba(245, 158, 11, 0.2);
+            }
+
+            .files-type span {
+                display: block;
+                margin-top: 5px;
+                color: $grey-color;
+            }
+
+            > span {
+                display: block;
+                margin-left: auto;
+                color: $grey-color;
+            }
+        }
+
+        > a {
+            display: block;
+            margin: 15px auto 0;
+            padding: 10px 15px;
+            transition-duration: $transition-duration;
+
+            i {
+                margin-right: 10px;
+            }
+
+            &:hover i {
+                animation: go-up 0.8s infinite alternate;
+            }
+        }
+    }
+}

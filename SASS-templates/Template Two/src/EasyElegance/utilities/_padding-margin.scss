@@ -1,0 +1,67 @@
+/* This is abstract way for margin and padding scss files */
+
+@use "../helpers/variables" as *;
+
+$padding-margin-types: (
+    "padding": "p",
+    "padding-top": "pt",
+    "padding-right": "pr",
+    "padding-bottom": "pb",
+    "padding-left": "pl",
+    "padding-x": "px",
+    "padding-y": "py",
+    "margin": "m",
+    "margin-top": "mt",
+    "margin-right": "mr",
+    "margin-bottom": "mb",
+    "margin-left": "ml",
+    "margin-x": "mx",
+    "margin-y": "my",
+);
+
+$padding-margin-values: (
+    "0": 0,
+    "1": $base-padding-margin,
+    "2": $base-padding-margin * 2,
+    "3": $base-padding-margin * 4,
+    "4": $base-padding-margin * 6,
+    "5": $base-padding-margin * 8
+);
+
+@mixin generate-padding-margin-classes($property, $prefix) {
+    @each $key, $value in $padding-margin-values {
+        @if (str-slice($property, 1, 1) == "p") {
+            @if ($prefix == "py") {
+                .#{$prefix}-#{$key}{
+                    padding: $value 0;
+                }
+            } @else if ($prefix == "px")  {
+                .#{$prefix}-#{$key}{
+                    padding: 0 $value;
+                }
+            } @else {
+                .#{$prefix}-#{$key}{
+                    #{$property}: $value;
+                }
+            }
+        } @else if (str-slice($property, 1, 1) == "m") {
+            @if ($prefix == "my") {
+                .#{$prefix}-#{$key}{
+                    margin: $value 0;
+                }
+            } @else if ($prefix == "mx")  {
+                .#{$prefix}-#{$key}{
+                    margin: 0 $value;
+                }
+            } @else {
+                .#{$prefix}-#{$key}{
+                    #{$property}: $value;
+                }
+            }
+        }
+    }
+}
+
+@each $property, $prefix in $padding-margin-types {
+    @include generate-padding-margin-classes($property, $prefix);
+}

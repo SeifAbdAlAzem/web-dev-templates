@@ -1,0 +1,45 @@
+@use "./variables" as *;
+
+header {
+    .container {
+        position: relative;
+    }
+    nav {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        .logo {
+            h2 {
+                font-size: 20px;
+                color: var(--primary-color);
+            }
+        }
+        .nav-btn {
+            display: none;
+        }
+        .nav-bar {
+            display: flex;
+            column-gap: 30px;
+            li {
+                &:first-child {
+                    a {
+                        color: var(--primary-color);
+                        font-weight: bold;
+                    }
+                }
+                a {
+                    color: $neutral-color;
+                    transition-duration: 0.5s;
+                    &:hover {
+                        font-weight: bold;
+                        color: var(--primary-color);
+                    }
+                }
+            }
+        }
+    }
+}

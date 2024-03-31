@@ -1,0 +1,20 @@
+$justify-content: (
+    "prefix": "justify-content",
+    "values": (
+        "start": start,
+        "center": center,
+        "end": end,
+        "space-between": space-between,
+        "space-around": space-around,
+        "space-evenly": space-evenly,
+    )
+);
+
+$prefix: map-get($justify-content, "prefix");
+$values: map-get($justify-content, "values");
+
+@each $key, $value in $values {
+    .#{$prefix}-#{$key}{
+        justify-content: $value;
+    }
+}

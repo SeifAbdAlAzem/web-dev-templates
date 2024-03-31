@@ -1,0 +1,471 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./placeholders" as *;
+
+// Start main Style
+main {
+    // Start Banner Style
+    .banner {
+        min-height: 100vh;
+        position: relative;
+        background-image: url("../imgs/01.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        &::after {
+            content: "";
+            position: absolute;
+            background: inherit;
+            width: 100%;
+            height: 100%;
+            -webkit-filter: brightness(0.5);
+            filter: brightness(0.5);
+        }
+        .settings {
+            position: fixed;
+            z-index: 10;
+            top: 0;
+            left: -235px;
+            background-color: $neutral-color;
+            height: 100vh;
+            height: 100dvh;
+            padding: 20px;
+            transition-duration: 0.5s;
+            .setting-btn {
+                position: absolute;
+                right: -35px;
+                top: 30%;
+                background-color: $neutral-color;
+                padding: 10px;
+                cursor: pointer;
+            }
+            .settings-control {
+                margin: 20px 0;
+                background-color: $black-color;
+                text-align: center;
+                padding: 10px;
+                h2 {
+                    color: $neutral-color;
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                }
+                .pick-colors {
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+                    span {
+                        cursor: pointer;
+                        width: 20px;
+                        height: 20px;
+                        display: block;
+                        background-color: #ff9800;
+                        border-radius: 50%;
+                        &.active {
+                            border: 2px solid $neutral-color;
+                        }
+                        &:nth-child(2) {
+                            background-color: #e91e63;
+                        }
+                        &:nth-child(3) {
+                            background-color: #009688;
+                        }
+                        &:nth-child(4) {
+                            background-color: #03a9f4;
+                        }
+                        &:last-child {
+                            background-color: #4caf50;
+                        }
+                    }
+                }
+                .buttons {
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+                    button {
+                        cursor: pointer;
+                        opacity: 1;
+                        width: 60px;
+                        background-color: var(--primary-color);
+                        color: $neutral-color;
+                        padding: 6px 10px;
+                        font-size: 12px;
+                        font-weight: bold;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        border: none;
+                        opacity: 0.5;
+                        &.active {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .reset {
+            cursor: pointer;
+            color: $neutral-color;
+            font-weight: bold;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 10px;
+        }
+        .welcome-msg {
+            color: $neutral-color;
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            h1 {
+                span {
+                    color: var(--primary-color);
+                }
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+        .bullets {
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            position: fixed;
+            z-index: 10;
+            right: 20px;
+            top: 30%;
+            a {
+                position: relative;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border: 3px solid var(--primary-color);
+                transition-duration: 0.5s;
+                background-color: transparent;
+                span {
+                    display: none;
+                    position: absolute;
+                    right: 40px;
+                    top: -10px;
+                }
+                &:hover {
+                    background-color: var(--primary-color);
+                    span {
+                        display: block;
+                        color: #FFF;
+                        background-color: var(--primary-color);
+                        padding: 8px 10px;
+                        width: 120px;
+                        text-align: center;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            right: -34px;
+                            top: 0px;
+                            border: 17px solid;
+                            border-color: transparent transparent transparent var(--primary-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Start About Us Style
+    .about-us {
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .about-msg {
+                width: 45%;
+                h2 {
+                    color: var(--primary-color);
+                    margin-bottom: 20px;
+                }
+                p {
+                    line-height: 2;
+                    color: #999;
+                }
+            }
+        }
+    }
+
+    // Start Skills Style
+    .our-skills {
+        background-color: #f5f5f5;
+        padding: 50px 0;
+        .skills-progress {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .skill {
+                background-color: $neutral-color;
+                padding: 10px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .progress {
+                    &:first-of-type {
+                        font-weight: bold;
+                    }
+                    &:last-of-type {
+                        position: relative;
+                        display: block;
+                        background-color: $bg-color;
+                        width: 85%;
+                        height: 35px;
+                        border-radius: 5px;
+                        span {
+                            content: "";
+                            position: absolute;
+                            width: 0;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            background-color: var(--primary-color);
+                            transition-duration: 0.5s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Start Gallery Style
+    .gallery {
+        padding: 50px 0;
+        .gallery-imgs {
+            @include display-grid(200px, 10px);
+            img {
+                padding: 3px;
+                background-color: $bg-color;
+                border: 1px solid #CCC;
+                cursor: pointer;
+            }
+        }
+    }
+
+    // Start Timeline Style
+    .timeline {
+        position: relative;
+        @extend %section-bg;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: calc(100% - 100px);
+            background-color: var(--primary-color);
+        }
+        .season-timeline {
+            span {
+                display: block;
+                margin: auto;
+                width: 50px;
+                background-color: var(--primary-color);
+                border-radius: 4px;
+                text-align: center;
+                color: $neutral-color;
+                padding: 2px 5px;
+                font-weight: bold;
+            }
+            .timeline-point {
+                width: 45%;
+                background-color: $neutral-color;
+                padding: 20px;
+                position: relative;
+                left: 20px;
+                margin: 25px 0;
+                h3 {
+                    margin-bottom: 15px;
+                    color: var(--primary-color);
+                }
+                p {
+                    color: $paragraph-color;
+                    line-height: 1.5;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 10px;
+                    right: -29px;
+                    border: 15px solid;
+                    border-color: transparent transparent transparent $neutral-color;
+                }
+                .point {
+                    position: absolute;
+                    top: 10px;
+                    right: -47px;
+                    background-color: $neutral-color;
+                    width: 25px;
+                    height: 25px;
+                    border: 2px solid var(--primary-color);
+                    border-radius: 50%;
+                }
+                &:nth-of-type(2) {
+                    left: 53%;
+                    &::after {
+                        right: 100%;
+                        border-color: transparent $neutral-color transparent transparent;
+                    }
+                    .point {
+                        right: 104%;
+                    }
+                }
+            }
+        }
+    }
+
+    // Start Features Style
+    .features {
+        padding: 50px 0;
+        .features-boxs {
+            @include display-grid(300px, 30px 15px);
+            .feature-box {
+                text-align: center;
+                img {
+                    width: 100px;
+                }
+                h3 {
+                    position: relative;
+                    margin-bottom: 25px;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -10px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 60px;
+                        height: 3px;
+                        background-color: var(--primary-color);
+                    }
+                }
+                p {
+                    color: $paragraph-color;
+                    line-height: $fs-lineheight;
+                }
+            }
+        }
+    }
+
+
+
+    // Start Testimonials Style
+    .testimonials {
+        position: relative;
+        @extend %section-bg;
+        &::before {
+            @extend %testimonial-bg;
+            left: 0;
+            background-color: var(--primary-color);
+        }
+        &::after {
+            @extend %testimonial-bg;
+            right: 0;
+            background-color: $black-color;
+        }
+        h2 {
+            font-size: 32px;
+            color: $neutral-color;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        .testimonials-boxs {
+            position: relative;
+            z-index: 2;
+            @include display-grid(300px, 10px);
+            div {
+                background-color: $neutral-color;
+                padding: 15px;
+                p {
+                    font-style: italic;
+                    color: $paragraph-color;
+                    line-height: 1.5;
+                }
+                .testimonial-details {
+                    margin-top: 20px;
+                    display: flex;
+                    align-items: center;
+                    img {
+                        width: 60px;
+                        border-radius: 50%;
+                        margin-right: 20px;
+                    }
+                    h3 {
+                        margin-bottom: 10px;
+                    }
+                    p {
+                        color: $paragraph-color;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // Start Contact Style
+    .contact-us {
+        display: flex;
+        height: 90vh;
+        padding: 50px 0;
+        background-image: url("../imgs/contact.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 0;
+            background-color: rgba(255, 255, 255, .6);
+        }
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+        form {
+            gap: 10px;
+            display: flex;
+            justify-content: center;
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                input {
+                    @extend %input-style;
+                }
+                textarea {
+                    @extend %input-style;
+                    resize: none;
+                    height: 140px;
+                }
+                .submit {
+                    border: none;
+                    color: $neutral-color;
+                    background-color: var(--primary-color);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+// Start Footer Style
+footer {
+    text-align: center;
+    background-color: $black-color;
+    color: $neutral-color;
+    padding: 20px;
+    span {
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+}

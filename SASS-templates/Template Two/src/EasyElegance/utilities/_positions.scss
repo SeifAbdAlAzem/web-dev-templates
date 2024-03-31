@@ -1,0 +1,19 @@
+$position: (
+    "prefix": "p",
+    "values": (
+        "relative": relative,
+        "absolute": absolute,
+        "fixed": fixed,
+        "sticky": sticky,
+        "static": static,
+    )
+);
+
+$prefix: map-get($position, "prefix");
+$values: map-get($position, "values");
+
+@each $key, $value in $values {
+    .#{$prefix}-#{$key}{
+        position: $value;
+    }
+}

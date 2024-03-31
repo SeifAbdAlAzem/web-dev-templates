@@ -1,0 +1,55 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixins' as *;
+@use '../helpers/extends' as *;
+
+// Courses Style
+.courses {
+    .course {
+        padding: 0;
+
+        img:first-child {
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            top: 20px;
+            left: 20px;
+            border: 2px solid $border-color;
+            border-radius: 50%;
+        }
+
+        img:nth-child(2) {
+            width: 100%;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .course-content {
+            padding: 20px;
+
+            p {
+                line-height: 1.6;
+                font-size: 14px;
+                color: $grey-color;
+                margin-top: 15px;
+            }
+        }
+
+        > span {
+            margin: auto;
+            display: block;
+            position: relative;
+            bottom: -2.5%;
+        }
+
+        .course-stats {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 10px;
+            border-top: 1px solid $border-color;
+
+            span {
+                color: $grey-color;
+                font-size: 13px;
+            }
+        }
+    }
+}

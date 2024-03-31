@@ -1,0 +1,17 @@
+@use "../helpers/variables" as *;
+@use "../helpers/extends" as *;
+
+.page-heading {
+    margin: 0 20px 40px;
+    position: relative;
+    &::before {
+        @extend %heading-deco;
+        background-color: $white-bk;
+        width: 120px;
+    }
+    &::after {
+        @extend %heading-deco;
+        background-color: $black-color;
+        width: 40px;
+    }
+}

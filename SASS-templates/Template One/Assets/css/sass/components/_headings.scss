@@ -1,0 +1,28 @@
+@use '../helpers/variables' as *;
+
+.section-heading {
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $main-color;
+    padding: 10px 15px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 10px;
+    text-align: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto 50px;
+}
+
+.section-heading::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: $grey-color;
+    left: 0;
+    margin-top: 13px;
+    z-index: -1;
+}

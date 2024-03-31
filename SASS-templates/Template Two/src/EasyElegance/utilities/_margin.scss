@@ -1,0 +1,43 @@
+@use "../helpers/variables" as *;
+
+$margin-types: (
+    "margin": "m",
+    "margin-top": "mt",
+    "margin-right": "mr",
+    "margin-bottom": "mb",
+    "margin-left": "ml",
+    "margin-x": "mx",
+    "margin-y": "my"
+);
+
+$margin-values: (
+    "0": 0,
+    "1": $base-margin,
+    "2": $base-margin * 2,
+    "3": $base-margin * 4,
+    "4": $base-margin * 6,
+    "5": $base-margin * 8,
+    "auto": auto,
+);
+
+@mixin generate-margin-classes($property, $prefix) {
+    @each $key, $value in $margin-values {
+        @if ($prefix == "my") {
+            .#{$prefix}-#{$key}{
+                margin: $value 0;
+            }
+        } @else if ($prefix == "mx")  {
+            .#{$prefix}-#{$key}{
+                margin: 0 $value;
+            }
+        } @else {
+            .#{$prefix}-#{$key}{
+                #{$property}: $value;
+            }
+        }
+    }
+}
+
+@each $property, $prefix in $margin-types {
+    @include generate-margin-classes($property, $prefix);
+}

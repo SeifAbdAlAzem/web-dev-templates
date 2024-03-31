@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Furniture</title>
+
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
+    <!-- Font Awesome CSS File -->
+    <link rel="stylesheet" href="Assets/css/all.min.css">
+    <!-- Normalize CSS File -->
+    <link rel="stylesheet" href="Assets/css/normalize.css">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="Assets/css/main.css">
+    <!-- Google Fonts "Roboto" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Start Header Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary position-fixed w-100 z-3">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./Assets/imgs/logo.png" alt="Logo" width="70" class="d-inline-block align-text-top">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item"><a class="nav-link active font-weight-bold" aria-current="page" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#services">Services</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About US</a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#aboutUs">About US</a></li>
+                                <li><a class="dropdown-item" href="#teams">Teams</a></li>
+                                <li><a class="dropdown-item" href="#portfolio">Portfolio</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Register</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-warning" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="offcanvas offcanvas-top z-3 w-50 h-50 rounded" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasTopLabel">Registeration Form</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-4">
+                        <label for="validationCustom01" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="validationCustom02" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="validationCustomUsername" class="form-label">Username</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                            <div class="invalid-feedback">
+                            Please choose a username.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="validationCustom03" class="form-label">City</label>
+                        <input type="text" class="form-control" id="validationCustom03" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid city.
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="validationCustom04" class="form-label">State</label>
+                        <select class="form-select" id="validationCustom04" required>
+                            <option selected disabled value="">Choose...</option>
+                            <option>...</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a valid state.
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="validationCustom05" class="form-label">Zip</label>
+                        <input type="text" class="form-control" id="validationCustom05" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid zip.
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Start Main Section -->
+    <main>
+        <!-- Start Banner Section -->
+        <section class="banner vh-100">
+            <div id="carouselExampleCaptions" class="carousel slide vh-100">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item active h-100 object-fit-cover">
+                        <div class="carousel-caption z-1">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item h-100 object-fit-cover">
+                        <div class="carousel-caption z-1">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item h-100 object-fit-cover">
+                        <div class="carousel-caption z-1">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Start Serviecs Section -->
+        <section class="services pt-5 pb-5" id="services">
+            <div class="container">
+                <div class="text-center position-relative mb-5">
+                    <img src="Assets/imgs/title.png" alt="title">
+                    <h2 class="m-2">Our Services</h2>
+                    <p class="text-uppercase">What Makes Us Special</p>
+                </div>
+
+                <div class="services-boxs row gap-5 justify-content-center">
+                    <div class="text-center border rounded p-4 col-11 col-md-3">
+                        <i class="fa-solid fa-pencil fa-4x text-warning"></i>
+                        <h3 class="text-secondary mt-3 mb-3">Service Title</h3>
+                        <p class="fs-6 lh-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, itaque! Atque ipsam omnis natus illo qui maiores, totam incidunt tempora.</p>
+                    </div>
+
+                    <div class="text-center border rounded p-4 col-11 col-md-4">
+                        <i class="fa-solid fa-tv fa-4x text-warning"></i>
+                        <h3 class="text-secondary mt-3 mb-3">Service Title</h3>
+                        <p class="fs-6 lh-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita id placeat eaque itaque optio! Minima consectetur maiores incidunt voluptatem quas?</p>
+                    </div>
+
+                    <div class="text-center border rounded p-4 col-11 col-md-3">
+                        <i class="fa-solid fa-plug fa-4x text-warning"></i>
+                        <h3 class="text-secondary mt-3 mb-3">Service Title</h3>
+                        <p class="fs-6 lh-lg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, illo. Ut pariatur et commodi! Impedit quis doloribus quaerat adipisci veniam?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Portfolio Section -->
+        <section class="portfolio pt-5 pb-5" id="portfolio">
+            <div class="container">
+                <div class="text-center position-relative mb-5">
+                    <img src="Assets/imgs/title.png" alt="title">
+                    <h2 class="m-2">Our Portfolio</h2>
+                    <p class="text-uppercase">Our Work Talks About Us</p>
+                </div>
+
+                <div class="project-nav">
+                    <ul class="d-flex flex-wrap justify-content-center align-items-center gap-2 gap-sm-3 px-0">
+                        <li class="btn btn-warning text-white">All</li>
+                        <li>Sofas</li>
+                        <li>Chairs</li>
+                        <li>Carpets</li>
+                        <li>Beds</li>
+                    </ul>
+                </div>
+
+                <div class="projects-boxs row text-center gap-4 justify-content-center">
+                    <div class="card col-12 col-md-3 border-0">
+                        <div class="product-image overflow-y-hidden position-relative">
+                            <img src="Assets/imgs/product-01.jpg" class="card-img-top w-100" alt="product-01">
+                            <button type="button" class="btn btn-warning text-white position-absolute z-3">Know More</button>
+                        </div>
+                        <div class="card-body w-100 p-4 border border-top-0 rounded-bottom">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+
+                    <div class="card col-12 col-md-3 border-0">
+                        <div class="product-image overflow-y-hidden position-relative">
+                            <img src="Assets/imgs/product-02.jpg" class="card-img-top w-100" alt="product-02">
+                            <button type="button" class="btn btn-warning text-white position-absolute z-3">Know More</button>
+                        </div>
+                        <div class="card-body w-100 p-4 border border-top-0 rounded-bottom">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+
+                    <div class="card col-12 col-md-3 border-0">
+                        <div class="product-image overflow-y-hidden position-relative">
+                            <img src="Assets/imgs/product-03.jpg" class="card-img-top w-100" alt="product-03">
+                            <button type="button" class="btn btn-warning text-white position-absolute z-3">Know More</button>
+                        </div>
+                        <div class="card-body w-100 p-4 border border-top-0 rounded-bottom">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+
+                    <div class="card col-12 col-md-3 border-0">
+                        <div class="product-image overflow-y-hidden position-relative">
+                            <img src="Assets/imgs/product-04.jpg" class="card-img-top w-100" alt="product-04">
+                            <button type="button" class="btn btn-warning text-white position-absolute z-3">Know More</button>
+                        </div>
+                        <div class="card-body w-100 p-4 border border-top-0 rounded-bottom">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+
+                    <div class="card col-12 col-md-3 border-0">
+                        <div class="product-image overflow-y-hidden position-relative">
+                            <img src="Assets/imgs/product-05.jpg" class="card-img-top w-100" alt="product-05">
+                            <button type="button" class="btn btn-warning text-white position-absolute z-3">Know More</button>
+                        </div>
+                        <div class="card-body w-100 p-4 border border-top-0 rounded-bottom">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+
+                    <div class="card col-12 col-md-3 border-0">
+                        <div class="product-image overflow-y-hidden position-relative">
+                            <img src="Assets/imgs/product-06.jpg" class="card-img-top w-100" alt="product-06">
+                            <button type="button" class="btn btn-warning text-white position-absolute z-3">Know More</button>
+                        </div>
+                        <div class="card-body w-100 p-4 border border-top-0 rounded-bottom">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+
+                    <div class="card col-12 col-md-3 border-0">
+                        <div class="product-image overflow-y-hidden position-relative">
+                            <img src="Assets/imgs/product-07.jpg" class="card-img-top w-100" alt="product-07">
+                            <button type="button" class="btn btn-warning text-white position-absolute z-3">Know More</button>
+                        </div>
+                        <div class="card-body w-100 p-4 border border-top-0 rounded-bottom">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+
+                    <div class="card col-12 col-md-3 border-0">
+                        <div class="product-image overflow-y-hidden position-relative">
+                            <img src="Assets/imgs/product-08.jpg" class="card-img-top w-100" alt="product-08">
+                            <button type="button" class="btn btn-warning text-white position-absolute z-3">Know More</button>
+                        </div>
+                        <div class="card-body w-100 p-4 border border-top-0 rounded-bottom">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start About Section -->
+        <section class="about pt-5 pb-5" id="aboutUs">
+            <div class="container">
+                <div class="text-center position-relative mb-5">
+                    <img src="Assets/imgs/title.png" alt="title">
+                    <h2 class="m-2">About Us</h2>
+                    <p class="text-uppercase">Who We Are</p>
+                </div>
+
+                <div class="about-content row gap-5">
+                    <div class="col-12 col-md-7 px-0">
+                            <div class="row w-100">
+                                <div class="col"></div>
+                                <div class="col-6"></div>
+                                <div class="col"></div>
+                            </div>
+                            <div class="row w-100">
+                                <div class="col-9"></div>
+                                <div class="col"></div>
+                            </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <h2 class="fs-1 text-warning">About US</h2>
+                        <p class="mt-3 mb-3 fs-6 lh-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore expedita accusantium minus veniam? Inventore, autem!</p>
+                        <p class="mt-3 mb-3 fs-6 lh-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos architecto esse tempora soluta autem assumenda nostrum dicta exercitationem veniam minus magnam ratione vitae, quasi iusto libero quo animi totam id.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Teams Section -->
+        <section class="teams pt-5 pb-5" id="teams">
+            <div class="container">
+                <div class="text-center position-relative mb-5">
+                    <img src="Assets/imgs/title.png" alt="title">
+                    <h2 class="m-2">Our Team</h2>
+                    <p class="text-uppercase">Our Secret Recipe</p>
+                </div>
+
+                <div class="team-members row row-gap-3">
+                    <div class="card col-md-6 col-lg-3 border-0">
+                        <img src="Assets/imgs/team-01.jpg" class="card-img-top" alt="team-01">
+                        <div class="card-body border border-top-0 rounded-bottom bg-secondary-subtle">
+                            <div class="card-head d-flex justify-content-between align-items-center">
+                                <h5 class="card-title m-0">Card title</h5>
+                                <a class="btn btn-warning text-white" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">About Me</a>
+                            </div>
+                            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                <div class="card card-body mt-2">
+                                    <p><span class="text-warning">Job Title: </span> Admin</p>
+                                    <p><span class="text-warning">Experience: </span>10 Years</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, enim.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card col-md-6 col-lg-3 border-0">
+                        <img src="Assets/imgs/team-02.jpg" class="card-img-top" alt="team-02">
+                        <div class="card-body border border-top-0 rounded-bottom bg-secondary-subtle">
+                            <div class="card-head d-flex justify-content-between align-items-center">
+                                <h5 class="card-title m-0">Card title</h5>
+                                <a class="btn btn-warning text-white" data-bs-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">About Me</a>
+                            </div>
+                            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                <div class="card card-body mt-2">
+                                    <p><span class="text-warning">Job Title: </span> Admin</p>
+                                    <p><span class="text-warning">Experience: </span>10 Years</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, enim.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card col-md-6 col-lg-3 border-0">
+                        <img src="Assets/imgs/team-03.jpg" class="card-img-top" alt="team-03">
+                        <div class="card-body border border-top-0 rounded-bottom bg-secondary-subtle">
+                            <div class="card-head d-flex justify-content-between align-items-center">
+                                <h5 class="card-title m-0">Card title</h5>
+                                <a class="btn btn-warning text-white" data-bs-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">About Me</a>
+                            </div>
+                            <div class="collapse multi-collapse" id="multiCollapseExample3">
+                                <div class="card card-body mt-2">
+                                    <p><span class="text-warning">Job Title: </span> Admin</p>
+                                    <p><span class="text-warning">Experience: </span>10 Years</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, enim.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card col-md-6 col-lg-3 border-0">
+                        <img src="Assets/imgs/team-04.jpg" class="card-img-top" alt="team-04">
+                        <div class="card-body border border-top-0 rounded-bottom bg-secondary-subtle">
+                            <div class="card-head d-flex justify-content-between align-items-center">
+                                <h5 class="card-title m-0">Card title</h5>
+                                <a class="btn btn-warning text-white" data-bs-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls="multiCollapseExample4">About Me</a>
+                            </div>
+                            <div class="collapse multi-collapse" id="multiCollapseExample4">
+                                <div class="card card-body mt-2">
+                                    <p><span class="text-warning">Job Title: </span> Admin</p>
+                                    <p><span class="text-warning">Experience: </span>10 Years</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, enim.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Sponsors Section -->
+        <section class="sponsors pt-5 pb-5" id="sponsors">
+            <div class="container overflow-hidden position-relative">
+                <h2 class="text-center mb-5">Our Sponsors</h2>
+                <div class="logos d-flex align-items-center justify-content-between">
+                    <div class="logos-slide d-flex align-items-center flex-nowrap">
+                        <img class="mx-5" src="Assets/imgs/tech-1.png" alt="tech-1">
+                        <img class="mx-5" src="Assets/imgs/tech-2.png" alt="tech-2">
+                        <img class="mx-5" src="Assets/imgs/tech-3.png" alt="tech-3">
+                        <img class="mx-5" src="Assets/imgs/tech-4.png" alt="tech-4">
+                        <img class="mx-5" src="Assets/imgs/tech-1.png" alt="tech-1">
+                        <img class="mx-5" src="Assets/imgs/tech-2.png" alt="tech-2">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Blogs Section -->
+        <section class="blogs pt-5 pb-5" id="blogs">
+            <div class="container">
+                <div class="text-center position-relative mb-5">
+                    <img src="Assets/imgs/title.png" alt="title">
+                    <h2 class="m-2">Our Blogs</h2>
+                    <p class="text-uppercase">Know More About Us</p>
+                </div>
+
+                <div class="card-group">
+                    <div class="card">
+                        <img src="Assets/imgs/blog-04.jpg" class="card-img-top" alt="blog-04">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="Assets/imgs/blog-02.jpg" class="card-img-top" alt="blog-02">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="Assets/imgs/blog-03.jpg" class="card-img-top" alt="blog-03">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Feedback Section -->
+        <section class="FQs pt-5 pb-5" id="FQs">
+            <div class="container">
+                <div class="text-center position-relative mb-5">
+                    <img src="Assets/imgs/title.png" alt="title">
+                    <h2 class="m-2">Frequent Questions</h2>
+                    <p class="text-uppercase">What We asked more about</p>
+                </div>
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button text-white bg-warning bg-gradient shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Accordion Item #1
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed text-white bg-warning bg-gradient shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Accordion Item #2
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed text-white bg-warning bg-gradient shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Accordion Item #3
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Start Footer Section -->
+    <footer class="bg-dark text-white pt-5 pb-5">
+        <div class="container text-center text-md-left">
+            <div class="row">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <img src="Assets/imgs/title.png" alt="title" class="mb-3">
+                    <p>Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+                    <div class="author">
+                        <p>Created By <span class="text-warning font-weight-bold">Graphberry</span></p>
+                        <p>© 2022 - <span class="text-warning font-weight-bold">Bondi Inc</span></p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h3 class="text-uppercase mb-4 font-weight-bold text-warning">Links</h3>
+                    <ul class="px-0">
+                        <li class="m-2"><a href="#Home" class="text-decoration-none text-white">Home</a></li>
+                        <li class="m-2"><a href="#services" class="text-decoration-none text-white">Our Services</a></li>
+                        <li class="m-2"><a href="#portfolio" class="text-decoration-none text-white">Portfolio</a></li>
+                        <li class="m-2"><a href="#teams" class="text-decoration-none text-white">Our Team</a></li>
+                        <li class="m-2"><a href="#FQs" class="text-decoration-none text-white">Feedback</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h3 class="text-uppercase mb-4 font-weight-bold text-warning">About Us</h3>
+                    <ul class="px-0">
+                        <li class="m-2"><a href="#" class="text-decoration-none text-white">Sign in</a></li>
+                        <li class="m-2"><a href="#" class="text-decoration-none text-white">Register</a></li>
+                        <li class="m-2"><a href="#about-us" class="text-decoration-none text-white">About Us</a></li>
+                        <li class="m-2"><a href="#blogs" class="text-decoration-none text-white">Our Blogs</a></li>
+                        <li class="m-2"><a href="#contact-us" class="text-decoration-none text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h3 class="text-uppercase mb-4 font-weight-bold text-warning">Contact Us</h3>
+                    <p>Get in touch with us via mail phone.We are waiting for your call or message</p>
+                    <a href="eamil@gmail.com" class="btn btn-warning text-white">company-name@domain.com</a>
+
+                    <div class="d-flex justify-content-center mt-3">
+                        <i class="fa-brands fa-facebook fa-lg facebook rounded-circle p-2"></i>
+                        <i class="fa-brands fa-twitter fa-lg twitter rounded-circle p-2"></i>
+                        <i class="fa-brands fa-linkedin fa-lg linkedin rounded-circle p-2"></i>
+                        <i class="fa-brands fa-youtube fa-lg youtube rounded-circle p-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle File -->
+    <script src="Assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome JS File -->
+    <script src="Assets/js/all.min.js"></script>
+    <!-- Main JS File -->
+    <script src="Assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+include includes/variables.pug
+
+doctype html
+html(lang="en")
+    head
+        include includes/meta.pug
+        title My Files
+        include includes/styles.pug
+    body
+        .sidebar
+                p(class= "logo") Elzero
+                ul
+                    each item, index in listItems
+                        li(class=index === 6 ? 'active' : '')
+                            a(href= item === 'Dashboard' ?  `${htmlFilesPath}index.html` : `${htmlFilesPath}${item.toLowerCase()}.html`)
+                                i(class=`${icons[index]} fa-fw`)
+                                span=item
+        include includes/header.pug
+        main
+            h1(class="page-heading") Files
+            |
+            |
+            // Files Boxs
+            .files-content
+                .grid-three.files
+                    each file in filesBoxs
+                        .box.file
+                            i(class= "fa-solid fa-download")
+                            .file-head
+                                img(src=`${imgsPath}${file.fileType}`, alt=`${file.fileType.split(".")[0]}`)
+                                span= `my-file.${file.fileType.split(".")[0]}`
+                            span= file.owner
+                            .file-stats
+                                span= file.date
+                                span= file.size
+                |
+                |
+                // Files Stats
+                .box.files-stats
+                    h2 Files Statistics
+                    |
+                    |
+                    each stats in filesStats
+                        .files-statistics(class=stats.statsColor)
+                            i(class=`${stats.icon} ${stats.iconStyle}`)
+                            .files-type
+                                p= stats.filesName
+                                span= `${stats.filesNumber} Files`
+                            span= stats.filesSize
+                    a(href="#", class="btn-shape blue-bk")
+                        i(class="fa-solid fa-angles-up")
+                        | Upload

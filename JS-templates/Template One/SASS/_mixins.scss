@@ -1,0 +1,59 @@
+@use "./variables" as *;
+
+// Grid Mixin
+
+@mixin display-grid($min-width, $gap) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($min-width, 1fr));
+    gap: $gap;
+}
+
+// Button Mixin
+
+@mixin btn($bg-color: #e2e2e2) {
+    cursor: pointer;
+    border: none;
+    padding: $base-padding $base-padding * 2;
+    border-radius: $base-border-radius;
+    background-color: $bg-color;
+}
+
+// flex-center Mixin
+
+@mixin flex-center($justify-content, $align-items ,$direction) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $direction;
+}
+
+// // Light and Dark Theme Mixin
+
+// @mixin theme($primary-theme: true) {
+//     @if $primary-theme {
+//         background-color: lighten($primary-color: #000000, $amount: 100%);
+//         color: darken($color: #000000, $amount: 100%);
+//     }
+// }
+
+// Overlay Mixin
+
+@mixin overlay($color, $opacity) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color, $opacity);
+}
+
+// Breakpoints Mixin
+
+@mixin breakpoints($point) {
+    $query: map-get($breakpoints, $point);
+    @if $query {
+        @media #{$query} {
+            @content;
+        }
+    }
+}

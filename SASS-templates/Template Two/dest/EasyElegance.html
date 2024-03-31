@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EasyElegance</title>
+  <!-- EasyElegance Library CSS File -->
+  <link rel="stylesheet" href="./css/EasyElegance.css">
+  <!-- Font Awesome CSS File -->
+  <link rel="stylesheet" href="./css/all.min.css">
+  <!-- Main CSS File -->
+  <link rel="stylesheet" href="./css/test.css">
+</head>
+<body>
+
+  <!-- Start Header Section -->
+
+  <header>
+    <div class="container">
+      <div class="nav-bar">
+        <div class="logo">
+          <img src="Assets/imgs/logo.png" alt="logo">
+        </div>
+        <div class="search-bar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" class="search-bar" placeholder="Search">
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="themes.html">Themes</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Start side-bar -->
+      <div class="sidebar">
+        <ul>
+          <li class="list-heading">Layout</li>
+          <li><a href="#breakpoints">Breakpoints</a></li>
+          <li><a href="#grid">Grid</a></li>
+        </ul>
+
+        <ul>
+          <li class="list-heading">Components</li>
+          <li><a href="#navbar">Navbar</a></li>
+          <li><a href="#cards">Cards</a></li>
+          <li><a href="#buttons">Buttons</a></li>
+          <li><a href="#badges">Badges</a></li>
+        </ul>
+
+        <ul>
+          <li class="list-heading">Utilities</li>
+          <li><a href="#margin">Margin</a></li>
+          <li><a href="#padding">Padding</a></li>
+          <li><a href="#opacity">Opacity</a></li>
+          <li><a href="#text">text</a></li>
+          <li><a href="#colors">Colors</a></li>
+          <li><a href="#borders">Borders</a></li>
+          <li><a href="#display">display</a></li>
+          <li><a href="#justify-content">justify-content</a></li>
+          <li><a href="#positions">positions</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Start Main Section -->
+
+  <main>
+    <div class="container">
+
+      <!-- Start Introduction Section -->
+      <section>
+        <div class="section-heading">
+          <h1>Get Started With EasyElegance</h1>
+        </div>
+        <div class="section-body">
+          <p class="description">
+            Welcome to <span>EasyElegance</span>, a comprehensive library built using HTML, SASS, JS, and Gulp as the task runner. This library is designed to streamline your web development process by offering a collection of reusable components, flexible grid systems, and versatile utilities. Whether you're creating a simple webpage or a complex web application, <span>EasyElegance</span> provides the tools you need to craft beautiful and responsive designs with ease.
+          </p>
+        </div>
+      </section>
+
+      <!-- Start Layout Section -->
+      <section>
+        <div class="section-heading">
+          <h2>Layout</h2>
+        </div>
+        <div class="section-body">
+          <p class="description">
+            In the layout section of <span>EasyElegance</span>, you'll find a robust grid system tailored to accommodate various screen sizes and resolutions. With classes for both parent containers and child elements, along with predefined breakpoints for media queries, designing responsive layouts has never been simpler. Whether you're building a single-column blog or a multi-column e-commerce site, our grid system empowers you to create visually stunning and user-friendly interfaces effortlessly.
+          </p>
+        </div>
+      </section>
+
+      <!-- Start Breakpoints Section -->
+      <section id="breakpoints">
+        <div class="section-heading">
+          <h2>Breakpoints</h2>
+        </div>
+        <div class="section-body">
+          <p class="description">
+            Explore the power of media queries with our carefully curated breakpoints. Seamlessly transition between different screen sizes and resolutions by leveraging our predefined breakpoints, allowing you to fine-tune your layouts for desktops, tablets, and mobile devices with ease. With clear and intuitive naming conventions, customizing your designs for specific breakpoints has never been simpler.
+          </p>
+          <div class="example">
+            <table>
+              <thead>
+                  <tr>
+                      <th>Breakpoint</th>
+                      <th>Query</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td>Mobile</td>
+                    <td>(max-width: 767px)</td>
+                  </tr>
+                  <tr>
+                    <td>Small</td>
+                    <td>(min-width: 768px) and (max-width: 991px)</td>
+                  </tr>
+                  <tr>
+                    <td>Medium</td>
+                    <td>(min-width: 992px) and (max-width: 1199px)</td>
+                  </tr>
+                  <tr>
+                    <td>Large</td>
+                    <td>(min-width: 1200px)</td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Start Grid Section -->
+      <section id="grid">
+        <div class="section-heading">
+          <h2>Grid</h2>
+        </div>
+        <div class="section-body">
+          <p class="description">
+            Dive into the heart of layout design with our intuitive grid system. Featuring classes for both parent containers and child elements, this system offers unparalleled flexibility for creating responsive layouts tailored to any screen size or resolution. With predefined breakpoints for media queries, you can effortlessly adapt your designs to ensure optimal viewing experiences across devices.
+          </p>
+          <div class="example">
+            <div class="options">
+              <label for="screenType">Select Screen Type:</label>
+              <select id="screenType">
+                <option value="default">Default</option>
+                <option value="mobile">Mobile</option>
+                <option value="tablet">Tablet</option>
+                <option value="desktop">Desktop</option>
+              </select>
+            </div>
+
+            <div class="row gap-1 justify-content-center" id="grid-container">
+              <div class="col col-12-xs col-5-sm col-3-lg">
+                <div class="card width-100">
+                  <h3 class="card-title">Hello, ninjas</h3>
+                  <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+
+              <div class="col col-12-xs col-5-sm col-3-lg">
+                <div class="card width-100">
+                  <h3 class="card-title">Hello, ninjas</h3>
+                  <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+
+              <div class="col col-12-xs col-5-sm col-3-lg">
+                <div class="card width-100">
+                  <h3 class="card-title">Hello, ninjas</h3>
+                  <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+
+              <div class="col col-12-xs col-5-sm col-3-lg">
+                <div class="card width-100">
+                  <h3 class="card-title">Hello, ninjas</h3>
+                  <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="code-heading">Code Snippet</h2>
+          <div class="code-container">
+            <pre class="code">
+              <code class="code-snippet">
+                &lt;div class="row gap-2 justify-content-center" id="grid-container"&gt;
+                    &lt;div class="col col-12-xs col-5-sm col-3-lg"&gt;
+                        &lt;div class="card"&gt;
+                            &lt;h3 class="card-title"&gt;Hello, ninjas&lt;/h3&gt;
+                            &lt;p class="card-body"&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col col-12-xs col-5-sm col-3-lg"&gt;
+                        &lt;div class="card"&gt;
+                            &lt;h3 class="card-title"&gt;Hello, ninjas&lt;/h3&gt;
+                            &lt;p class="card-body"&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col col-12-xs col-5-sm col-3-lg"&gt;
+                        &lt;div class="card"&gt;
+                            &lt;h3 class="card-title"&gt;Hello, ninjas&lt;/h3&gt;
+                            &lt;p class="card-body"&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col col-12-xs col-5-sm col-3-lg"&gt;
+                        &lt;div class="card"&gt;
+                            &lt;h3 class="card-title"&gt;Hello, ninjas&lt;/h3&gt;
+                            &lt;p class="card-body"&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+            <button type="button" class="copy-btn">Copy code</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Start Components Section -->
+      <section>
+        <div class="section-heading">
+          <h2>Components</h2>
+        </div>
+        <div class="section-body">
+          <p class="description">
+            Discover a wealth of pre-styled components in the components section of <span>EasyElegance</span>. From elegant cards to sleek navigation bars, stylish buttons, and attention-grabbing badges, this section offers everything you need to enhance the look and feel of your website. With minimal setup required, you can quickly integrate these components into your project and elevate its aesthetic appeal with ease.
+          </p>
+        </div>
+      </section>
+
+      <!-- Start Navbar Section -->
+      <section id="navbar">
+        <div class="section-heading">
+          <h2>Navbar</h2>
+        </div>
+        <div class="section-body">
+          <p class="description">
+            Navigate your website with style using our sophisticated navbar component. Featuring responsive design and customizable styling options, our navbar seamlessly adapts to different screen sizes and resolutions, ensuring a seamless user experience across devices. With support for dropdown menus, brand logos, and navigation links, you can create professional-looking navigation bars that enhance the overall usability of your website.
+          </p>
+          <div class="example">
+            <h2>Navbar One</h2>
+            <div class="nav-bar-one">
+              <div class="logo">
+                <p>Logo</p>
+              </div>
+              <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" class="search-bar" placeholder="Search">
+              </div>
+              <nav>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Themes</a></li>
+                  <li><a href="#">Login</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <h2>Navbar Two</h2>
+            <div class="nav-bar-two">
+              <div class="logo">
+                <p>Logo</p>
+              </div>
+              <nav>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Login</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <h2 class="code-heading">Code Snippet</h2>
+          <div class="code-slider">
+            <div class="code-slider-container">
+              <pre class="code">
+                <code class="code-snippet">
+                  <h2>Navbar One</h2>
+                  &lt;div class="nav-bar-one"&gt;
+                    &lt;div class="logo"&gt;
+                      &lt;p&gt;Logo&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="search-bar"&gt;
+                      &lt;i class="fa-solid fa-magnifying-glass"&gt;&lt;/i&gt;
+                      &lt;input type="search" class="search-bar" placeholder="Search"&gt;
+                    &lt;/div&gt;
+                    &lt;nav&gt;
+                      &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Themes&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Login&lt;/a&gt;&lt;/li&gt;
+                      &lt;/ul&gt;
+                    &lt;/nav&gt;
+                  &lt;/div&gt;
+                </code>
+              </pre>
+              <button type="button" class="copy-btn">Copy code</button>
+            </div>
+
+            <div class="code-slider-container">
+              <pre class="code">
+                <code class="code-snippet">
+                  <h2>Navbar Two</h2>
+                  &lt;div class="nav-bar-two"&gt;
+                    &lt;div class="logo"&gt;
+                      &lt;p&gt;Logo&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;nav&gt;
+                      &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Login&lt;/a&gt;&lt;/li&gt;
+                      &lt;/ul&gt;
+                    &lt;/nav&gt;
+                  &lt;/div&gt;
+                </code>
+              </pre>
+              <button type="button" class="copy-btn">Copy code</button>
+            </div>
+            <div class="slider-btns">
+              <button type="button" class="prev-btn">Previous</button>
+              <button type="button" class="next-btn">Next</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Start Cards Section -->
+      <section id="cards" class="cards">
+        <div class="section-heading">
+          <h2>Cards</h2>
+        </div>
+        <div class="section-body">
+          <p class="description">
+            Elevate your content presentation with our versatile card components. From showcasing products to highlighting key information, our cards offer a sleek and modern design that enhances the visual appeal of your website. With customizable options for headers, bodies, and footers, you can create engaging card layouts that capture your audience's attention and convey your message effectively.
+          </p>
+          <div class="example">
+            <h2>Card Type One</h2>
+            <div class="card">
+              <h1 class="card-title">This is a title</h1>
+              <p class="card-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sunt, quo totam aliquam praesentium ducimus tempore sapiente quia nulla optio? Lorem ipsum, dolor sit amet consectetur <a href="#">adipisicing elit</a>.</p>
+            </div>
+
+            <h2>Card Type Two</h2>
+            <div class="card-two-container">
+              <img src="https://placehold.co/600x400/000000/FFFFFF.png" alt="">
+              <div class="cardTwo">
+                <h2>Card Title</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt officiis vitae totam blanditiis alias.</p>
+                <div class="card-btn">
+                  <a href="#">Show More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="code-heading">Code Snippet</h2>
+          <div class="code-slider">
+            <div class="code-slider-container">
+              <pre class="code">
+                <code class="code-snippet">
+                  <h2>Card One</h2>
+                  &lt;div class="card"&gt;
+                    &lt;h1 class="card-title"&gt;This is a title&lt;/h1&gt;
+                    &lt;p class="card-body"&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sunt, quo totam aliquam praesentium ducimus tempore sapiente quia nulla optio? Lorem ipsum, dolor sit amet consectetur &lt;a href="#"&gt;adipisicing elit&lt;/a&gt;.&lt;/p&gt;
+                  &lt;/div&gt;
+                </code>
+              </pre>
+              <button type="button" class="copy-btn">Copy code</button>
+            </div>
+
+            <div class="code-slider-container">
+              <pre class="code">
+                <code class="code-snippet">
+                  <h2>Card Two</h2>
+                  &lt;div class="card-two-container"&gt;
+                    &lt;img src="https://placehold.co/600x400/000000/FFFFFF.png" alt=""&gt;
+                    &lt;div class="cardTwo"&gt;
+                      &lt;h2&gt;Card Title&lt;/h2&gt;
+                      &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt officiis vitae totam blanditiis alias.&lt;/p&gt;
+                      &lt;div class="card-btn"&gt;
+                        &lt;a href="#"&gt;Show More&lt;/a&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                </code>
+              </pre>
+              <button type="button" class="copy-btn">Copy code</button>
+            </div>
+            <div class="slider-btns">
+              <button type="button" class="prev-btn">Previous</button>
+              <button type="button" class="next-btn">Next</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Start Buttons Section -->
+      <section id="buttons" class="utility">
+        <div class="section-heading">
+          <h2>Buttons</h2>
+        </div>
+        <div class="section-body">
+          <p class="description">
+            Make an impression with our stylish and versatile button components. Whether you're prompting user actions or directing traffic to important sections of your website, our buttons offer a wide range of styles and sizes to suit your needs. With customizable colors, hover effects, and transition animations, you can design buttons that not only look great but also enhance the interactivity and usability of your website.
+          </p>
+          <div class="example">
+            <a href="#" class="btn text-black">default btn</a>
+            <a href="#" class="btn-primary text-white">click me</a>
+            <a href="#" class="btn-secondary text-white">click me</a>
+            <a href="#" class="btn-error text-white">click me</a>
+            <a href="#" class="btn-info text-white">click me</a>
+            <a href="#" class="btn-outlined-purple text-purple text-hover-white">click me</a>
+            <a href="#" class="btn-outlined-orange text-orange text-hover-white">click me</a>
+            <a href="#" class="btn-complement-purple">click me</a>
+            <a href="#" class="btn-complement-primary">click me</a>
+          </div>
+
+          <div class="code-container">
+            <pre class="code">
+              <code class="code-snippet">
+                .btn-yellow {
+                  cursor: pointer;
+                  border: none;
+                  padding: 0.75rem 1.5rem;
+                  border-radius: 20px;
+                  background-color: #e6e619;
+                }
+                .btn-outlined-yellow {
+                  cursor: pointer;
+                  border: none;
+                  padding: 0.75rem 1.5rem;
+                  border-radius: 20px;
+                  background-color: #fff;
+                  border: 1px solid #e6e619;
+                }
+                .btn-complement-yellow {
+                  cursor: pointer;
+                  border: none;
+                  padding: 0.75rem 1.5rem;
+                  border-radius: 20px;
+                  background-color: #e6e619;
+                  color: #1919e6;
+                }
+                .btn-yellow:hover {
+                  background-color: #e9e930;
+                }
+              </code>
+            </pre>
+            <button type="button" class="copy-btn">Copy code</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Start Badges Section -->
+      <section id="badges" class="utility">
+        <div class="section-heading">
+          <h2>Badges</h2>
+        </div>
+        <div class="section-body">
+          <p class="description">
+            Highlight important information and add visual flair to your content with our eye-catching badge components. Perfect for indicating status, highlighting new features, or showcasing user achievements, our badges come in various shapes, sizes, and colors to suit your design preferences. With easy integration and flexible customization options, you can effortlessly incorporate badges into your website and draw attention to key elements with style.
+          </p>
+          <div class="example">
+            <span class="badge-primary text-white">Primary</span>
+            <span class="badge-secondary text-white">Secondry</span>
+            <span class="badge-error text-white">Error</span>
+            <span class="badge-info text-white">Info</span>
+            <span class="badge-blue text-white">Blue</span>
+            <span class="badge-red text-white">Red</span>
+            <span class="badge-yellow text-white">Yellow</span>
+            <span class="badge-green text-white">Green</span>
+            <span class="badge-orange text-white">Orange</span>
+            <span class="badge-purple text-white">Purble</span>
+            <span class="badge-grey text-white">Grey</span>
+            <span class="badge-black text-white">Black</span>
+            <span class="badge-white">White</span>
+          </div>
+
+          <div class="code-container">
+            <pre class="code">
+              <code class="code-snippet">
+                .badge-purple {
+                  border-radius: 80px;
+                  background-color: #9900ff;
+                  padding: 0.1875rem 0.375rem;
+                  font-size: 0.75rem;
+                  font-weight: normal;
+                }
+
+                .badge-grey {
+                  border-radius: 80px;
+                  background-color: #808080;
+                  padding: 0.1875rem 0.375rem;
+                  font-size: 0.75rem;
+                  font-weight: normal;
+                }
+
+                .badge-black {
+                  border-radius: 80px;
+                  background-color: black;
+                  padding: 0.1875rem 0.375rem;
+                  font-size: 0.75rem;
+                  font-weight: normal;
+                }
+              </code>
+            </pre>
+            <button type="button" class="copy-btn">Copy code</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Start Utiities Section -->
+      <section>
+        <div class="section-heading">
+          <h2>Utilities</h2>
+        </div>
+        <div class="section-body">
+          <p class="description">
+            Streamline your styling process with the utilities section of <span>EasyElegance</span>. Here, you'll find a comprehensive set of classes covering everything from margins and padding to borders, colors, positions, and more. Whether you're fine-tuning the spacing between elements, adjusting text properties, or aligning content, our utilities provide the flexibility and control you need to achieve pixel-perfect designs without the hassle.
+          </p>
+        </div>
+      </section>
+
+      <!-- Start Margin Section -->
+      <section id="margin-padding" class="utility">
+        <div class="section-heading">
+          <h2>Margin And Padding</h2>
+        </div>
+        <div class="section-body">
+          <p class="description">
+            Fine-tune the spacing and layout of your elements with our comprehensive margin and padding utilities. Whether you need to add breathing room between content sections or adjust the alignment of individual elements, our utilities provide precise control over spacing with intuitive classes. With support for responsive design and shorthand notation, achieving consistent and visually appealing layouts has never been easier.
+          </p>
+          <div class="catalog">
+            <h2>How to use Margin and Padding</h2>
+            <p>The classes are named using the format <span>{property}{sides}-{size}</span>.</p>
+
+            <h3>Where property is one of:</h3>
+            <ul>
+              <li><span>m - </span>for classes that set <span>margin</span></li>
+              <li><span>p - </span>for classes that set <span>padding</span></li>
+            </ul>
+
+            <h3>Where sides is one of:</h3>
+            <ul>
+              <li><span>t - </span>for classes that set <span>margin-top or padding-top</span></li>
+              <li><span>b - </span>for classes that set <span>margin-bottom or padding-bottom</span></li>
+              <li><span>l - </span>for classes that set <span>margin-left or padding-left</span></li>
+              <li><span>r - </span>for classes that set <span>margin-right or padding-right</span></li>
+              <li><span>x - </span>for classes that set <span>both *-left and *-right</span></li>
+              <li><span>y - </span>for classes that set <span>mboth *-top and *-bottom</span></li>
+              <li><span>blank - </span>for classes that set a margin or padding on <span>all 4 sides of the element</span></li>
+            </ul>
+
+            <h3>Where size is one of:</h3>
+            <ul>
+              <li><span>0 - </span>for classes that eliminate the margin or padding by setting it to <span>0</span></li>
+              <li><span>1 - </span>(by default) for classes that set the margin or padding to $spacer <span>.75rem</span></li>
+              <li><span>2 - </span>(by default) for classes that set the margin or padding to $spacer <span>1.5rem</span></li>
+              <li><span>3 - </span>(by default) for classes that set the margin or padding to $spacer <span>3rem</span></li>
+              <li><span>4 - </span>(by default) for classes that set the margin or padding to $spacer <span>4.5rem</span></li>
+              <li><span>5 - </span>(by default) for classes that set the margin or padding to $spacer <span>6rem</span></li>
+              <li><span>auto - </span>for classes that set the margin to <span>auto</span></li>
+            </ul>
+
+          </div>
+
+          <div class="code-container">
+            <pre class="code">
+              <code class="code-snippet">
+                .m-1 {
+                  margin: 0.75rem;
+                }
+                .mt-2 {
+                  margin-top: 1.5rem;
+                }
+                .pr-0 {
+                  padding-right: 0;
+                }
+                .px-1 {
+                  padding: 0 0.75rem;
+                }
+              </code>
+            </pre>
+            <button type="button" class="copy-btn">Copy code</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Start Opacity Section -->
+      <section id="opacity">
+        <div class="section-heading">
+          <h2>Opacity</h2>
+        </div>
+        <div class="section-body">
+          <p class="description">
+            Add transparency and visual depth to your elements with our opacity utilities. Whether you're creating subtle overlay effects, fading transitions, or adjusting the transparency of background elements, our utilities offer precise control over opacity levels with intuitive classes. With support for RGBA notation and customizable opacity values, you can create immersive and visually stunning designs that captivate your audience and elevate the user experience.
+          </p>
+          <div class="example">
+            <span class="o-10">10</span>
+            <span class="o-20">20</span>
+            <span class="o-30">30</span>
+            <span class="o-40">40</span>
+            <span class="o-50">50</span>
+            <span class="o-60">60</span>
+            <span class="o-70">70</span>
+            <span class="o-80">80</span>
+            <span class="o-90">90</span>
+            <span class="o-100">100</span>
+          </div>
+
+          <div class="code-container">
+            <pre class="code">
+              <code class="code-snippet">
+                .o-10 {
+                  opacity: 0.1;
+                }
+
+                .o-20 {
+                  opacity: 0.2;
+                }
+              </code>
+            </pre>
+            <button type="button" class="copy-btn">Copy code</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Start Text Section -->
+      <section id="text">
+        <div class="section-heading">
+          <h2>Text</h2>
+        </div>
+        <div class="section-body">
+          <p class="description">
+            Refine the typography and readability of your content with our text utilities. Whether you're adjusting font size, font weight, or text transformation, our utilities offer a wide range of customization options to enhance the visual appeal and legibility of your text. With support for responsive design and scalable typography, you can create engaging and accessible content that looks great on any device and screen size.
+          </p>
+          <div class="catalog">
+            <div class="font-size">
+              <h3>Font Sizes</h3>
+              <p class="fs-sm">this is small font</p>
+              <p class="fs-md">this is medium font</p>
+              <p class="fs-lg">this is large font</p>
+              <p class="fs-xl">this is extra large font</p>
+              <p class="fs-xxl">this is extra, extra large font</p>
+            </div>
+
+            <div class="font-weight">
+              <h3>Font Weight</h3>
+              <p class="fw-100">Font Weight 100</p>
+              <p class="fw-200">Font Weight 200</p>
+              <p class="fw-300">Font Weight 300</p>
+              <p class="fw-400">Font Weight 400</p>
+              <p class="fw-500">Font Weight 500</p>
+              <p class="fw-600">Font Weight 600</p>
+              <p class="fw-700">Font Weight 700</p>
+              <p class="fw-800">Font Weight 800</p>
+              <p class="fw-900">Font Weight 900</p>
+              <p class="fw-bold">Bold</p>
+              <p class="fw-bolder">Bolder</p>
+              <p class="fw-normal">Normal</p>
+              <p class="fw-lighter">Lighter</p>
+            </div>
+
+            <div class="line-height">
+              <h3>line-height</h3>
+              <div class="line-height-boxs d-flex justify-content-space-between">
+                <p class="line-height-1x">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe explicabo eius aspernatur qui commodi expedita enim alias rem nesciunt possimus!</p>
+                <p class="line-height-1-5x">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel vero dicta labore architecto itaque ipsum ullam laudantium a saepe modi?</p>
+                <p class="line-height-2x">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, deserunt minima? Accusamus maiores maxime assumenda et odit recusandae, expedita officiis.</p>
+                <p class="line-height-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, deserunt minima? Accusamus maiores maxime assumenda et odit recusandae, expedita officiis.</p>
+              </div>
+            </div>
+
+            <div class="text-transform">
+              <h3>Text Transform</h3>
+              <div class="text-transform-container d-flex gap-2 ml-0">
+                <p class="text-transform-uppercase pl-0">UpperCase</p>
+                <p class="text-transform-lowercase">LowerCase</p>
+                <p class="text-transform-capitalize">capitalize</p>
+              </div>
+            </div>
+
+            <div class="text-align">
+              <h3>Text Alignment</h3>
+              <div class="text-transform-container">
+                <p class="text-align-start">Start</p>
+                <p class="text-align-center">Center</p>
+                <p class="text-align-end">End</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="code-container">
+            <pre class="code">
+              <code class="code-snippet">
+                .fs-sm {
+                  font-size: 0.75rem;
+                }
+
+                .fs-md {
+                  font-size: 1rem;
+                }
+
+                .fw-100 {
+                  font-weight: 100;
+                }
+
+                .fw-200 {
+                  font-weight: 200;
+                }
+
+                .fw-lighter {
+                  font-weight: lighter;
+                }
+
+                .line-height-1x {
+                  line-height: 1;
+                }
+
+                .line-height-1-5x {
+                  line-height: 1.5;
+                }
+
+                .text-transform-capitalize {
+                  text-transform: capitalize;
+                }
+
+                .text-align-start {
+                  text-align: start;
+                }
+
+                .text-align-center {
+                  text-align: center;
+                }
+              </code>
+            </pre>
+            <button type="button" class="copy-btn">Copy code</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Start Color Section -->
+      <section id="colors">
+        <div class="section-heading">
+          <h2>Colors</h2>
+        </div>
+        <div class="section-body">
+          <p class="description">
+            Infuse your designs with vibrant hues and captivating color schemes using our color utilities. Whether you're setting text color, background color, or customizing link styles, our utilities provide a seamless way to apply and manage colors throughout your website. With support for named colors, hexadecimal values, and RGB notation, you can easily create harmonious color palettes that reflect your brand identity and captivate your audience.
+          </p>
+          <div class="example">
+
+            <h3>Font Color</h3>
+            <span class="text-primary">primary text</span> |
+            <span class="text-secondary">secondary text</span> |
+            <span class="text-error">error text</span> |
+            <span class="text-info">info text</span> |
+            <span class="text-blue">blue text</span> |
+            <span class="text-red">red text</span> |
+            <span class="text-green">green text</span> |
+            <span class="text-yellow">yellow text</span> |
+            <span class="text-purple">purple text</span> |
+            <span class="text-orange">orange text</span> |
+            <span class="text-gray">gray text</span>
+
+            <h3>Background Color</h3>
+            <span class="bg-primary text-white">bg primary</span> |
+            <span class="bg-secondary text-white">bg secondary</span> |
+            <span class="bg-error text-white">bg error</span> |
+            <span class="bg-info text-white">bg info</span> |
+            <span class="bg-blue text-white">bg blue</span> |
+            <span class="bg-red text-white">bg red</span> |
+            <span class="bg-green text-white">bg green</span> |
+            <span class="bg-yellow text-white">bg yellow</span> |
+            <span class="bg-purple text-white">bg purple</span> |
+            <span class="bg-orange text-white">bg orange</span> |
+            <span class="bg-gray text-white">bg gray</span>
+
+            <h3>Light And Dark Variations of Color</h3>
+            <span class="bg-primary-dark-8 text-white">primary dark 8</span> |
+            <span class="bg-primary-dark-6 text-white">primary dark 6</span> |
+            <span class="bg-primary-dark-4 text-white">primary dark 4</span> |
+            <span class="bg-primary-dark-2 text-white">primary dark 2</span> |
+            <span class="bg-primary-light-2 text-white">primary light 2</span> |
+            <span class="bg-primary-light-4 text-white">primary light 4</span> |
+            <span class="bg-primary-light-6 text-white">primary light 6</span> |
+            <span class="bg-primary-light-8 text-white">primary light 8</span>
+          </div>
+
+          <div class="code-container">
+            <pre class="code">
+              <code class="code-snippet">
+                .text-primary {
+                  color: #326dee;
+                }
+                .bg-primary {
+                  background-color: #326dee;
+                }
+                .text-secondary-light-1 {
+                  color: #31ce92;
+                }
+                .bg-secondary-light-6 {
+                  background-color: #a3e9cf;
+                }
+              </code>
+            </pre>
+            <button type="button" class="copy-btn">Copy code</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Start Border Section -->
+      <section id="border">
+        <div class="section-heading">
+          <h2>Border</h2>
+        </div>
+        <div class="section-body">
+          <p class="description">
+            Add depth and definition to your elements with our versatile border utilities. From simple borders to complex outlines and shadow effects, our utilities offer a wide range of customization options to suit your design needs. With intuitive classes for border styles, widths, and colors, you can effortlessly enhance the visual hierarchy of your website and create polished and professional-looking interfaces.
+          </p>
+          <div class="example">
+            <h3>Border Directions</h3>
+            <div class="border-directions d-flex justify-content-space-between">
+              <div class="border-default p-2">Default</div>
+              <div class="border-none p-2">None</div>
+              <div class="border-top p-2">Top</div>
+              <div class="border-right p-2">Right</div>
+              <div class="border-bottom p-2">Bottom</div>
+              <div class="border-left p-2">Left</div>
+              <div class="border-x p-2">x</div>
+              <div class="border-y p-2">y</div>
+              <div class="border-t-0 p-2">t-0</div>
+            </div>
+
+            <h3>Border Width</h3>
+            <div class="border-width d-flex gap-2">
+              <div class="border-default bw-medium">Medium</div>
+              <div class="border-default bw-thick mx-2">Thick</div>
+              <div class="border-default bw-thin">Thin</div>
+            </div>
+
+            <h3>Border Color</h3>
+            <div class="border-color d-flex justify-content-space-between gap-1 flex-wrap">
+              <div class="border-default bc-primary">Primary</div>
+              <div class="border-default bc-secondary">Secondry</div>
+              <div class="border-default bc-error">Error</div>
+              <div class="border-default bc-info">Info</div>
+              <div class="border-default bc-blue">Blue</div>
+              <div class="border-default bc-red">Red</div>
+              <div class="border-default bc-yellow">Yellow</div>
+              <div class="border-default bc-green">Green</div>
+              <div class="border-default bc-orange">Orange</div>
+              <div class="border-default bc-purple">Purple</div>
+              <div class="border-default bc-grey">Grey</div>
+              <div class="border-default bc-black">Black</div>
+              <div class="border-default bc-white">White</div>
+            </div>
+
+            <h3>Border Radius</h3>
+            <div class="border-radius d-flex gap-2">
+              <div class="border-default br-default">Default</div>
+              <div class="border-default br-none">None</div>
+              <div class="border-default br-xs">xs</div>
+              <div class="border-default br-sm">sm</div>
+              <div class="border-default br-lg">lg</div>
+              <div class="border-default br-full">full</div>
+            </div>
+
+          </div>
+
+          <div class="code-container">
+            <pre class="code">
+              <code class="code-snippet">
+                .border-left {
+                  border-left: 1 solid;
+                }
+                .border-x {
+                  border-right: 1 solid;
+                  border-left: 1 solid;
+                }
+                .bc-primary {
+                  border-color: #326dee;
+                }
+                .bc-secondary {
+                  border-color: #1ac886;
+                }
+                .br-lg {
+                  border-radius: 40px;
+                }
+                .br-full {
+                  border-radius: 50%;
+                }
+              </code>
+            </pre>
+            <button type="button" class="copy-btn">Copy code</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Start Display Section -->
+      <section id="display">
+        <div class="section-heading">
+          <h2>Display</h2>
+        </div>
+        <div class="section-body">
+          <p class="description">
+            Transform the layout and behavior of your elements with our display utilities. Whether you're toggling visibility, adjusting flexbox properties, or controlling element flow, our utilities offer a comprehensive set of classes to customize display behavior with ease. With support for responsive design and flexible layout options, you can create dynamic and responsive interfaces that adapt seamlessly to user interactions and device characteristics.
+          </p>
+          <div class="example">
+
+            <h3>Block and Inline and Inline-Block</h3>
+            <div class="d-block bg-background width-25 p-2 my-2 text-align-center">Block</div>
+
+            <div class="d-inline-block bg-background width-25 p-2 text-align-center">Inline-Block</div>
+            <div class="d-inline-block bg-background width-25 p-2 text-align-center">Inline-Block</div>
+
+            <h3>Flex</h3>
+            <div class="d-flex gap-2">
+              <div class="bg-background width-25 text-align-center">Flex</div>
+              <div class="bg-background width-25 text-align-center">Flex</div>
+              <div class="bg-background width-25 text-align-center">Flex</div>
+            </div>
+
+          </div>
+
+          <div class="code-container">
+            <pre class="code">
+              <code class="code-snippet">
+                .d-flex {
+                  display: flex;
+                }
+                .d-inline {
+                  display: inline;
+                }
+                .d-block {
+                  display: block;
+                }
+              </code>
+            </pre>
+            <button type="button" class="copy-btn">Copy code</button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Start justify-content Section -->
+      <section id="justify-content">
+        <div class="section-heading">
+          <h2>Justify-content</h2>
+        </div>
+        <div class="section-body">
+          <p class="description">
+            Achieve balanced and visually appealing layouts with our justify-content utilities. Whether you're distributing space between elements, aligning content within a container, or creating flexible layouts with dynamic spacing, our utilities offer precise control over content alignment and distribution. With support for flexbox and grid layouts, you can create responsive and adaptive designs that adapt seamlessly to different screen sizes and resolutions.
+          </p>
+          <div class="example">
+            <div class="d-flex gap-2 justify-content-start my-1">
+              <div class="bg-background text-align-center">Start</div>
+              <div class="bg-background text-align-center">Start</div>
+              <div class="bg-background text-align-center">Start</div>
+            </div>
+
+            <div class="d-flex gap-2 justify-content-center my-1">
+              <div class="bg-background text-align-center">Center</div>
+              <div class="bg-background text-align-center">Center</div>
+              <div class="bg-background text-align-center">Center</div>
+            </div>
+
+            <div class="d-flex gap-2 justify-content-end my-1">
+              <div class="bg-background text-align-center">End</div>
+              <div class="bg-background text-align-center">End</div>
+              <div class="bg-background text-align-center">End</div>
+            </div>
+
+            <div class="d-flex gap-2 justify-content-space-between my-1">
+              <div class="bg-background text-align-center">Space Between</div>
+              <div class="bg-background text-align-center">Space Between</div>
+              <div class="bg-background text-align-center">Space Between</div>
+            </div>
+
+            <div class="d-flex gap-2 justify-content-space-around my-1">
+              <div class="bg-background text-align-center">Space Around</div>
+              <div class="bg-background text-align-center">Space Around</div>
+              <div class="bg-background text-align-center">Space Around</div>
+            </div>
+
+            <div class="d-flex gap-2 justify-content-space-evenly my-1">
+              <div class="bg-background text-align-center">Space Evenly</div>
+              <div class="bg-background text-align-center">Space Evenly</div>
+              <div class="bg-background text-align-center">Space Evenly</div>
+            </div>
+          </div>
+
+          <div class="code-container">
+            <pre class="code">
+              <code class="code-snippet">
+                .justify-content-center {
+                  justify-content: center;
+                }
+                .justify-content-end {
+                  justify-content: end;
+                }
+                .justify-content-space-between {
+                  justify-content: space-between;
+                }
+                .justify-content-space-around {
+                  justify-content: space-around;
+                }
+              </code>
+            </pre>
+            <button type="button" class="copy-btn">Copy code</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Start Positions Section -->
+      <section id="positions">
+        <div class="section-heading">
+          <h2>Positions</h2>
+        </div>
+        <div class="section-body">
+          <p class="description">
+            Take control of element positioning with our intuitive position utilities. Whether you need to center-align content, float elements within a container, or precisely position elements on the page, our utilities offer a flexible and intuitive solution. With support for absolute, relative, fixed, and sticky positioning, you can achieve pixel-perfect layouts that adapt seamlessly to different screen sizes and resolutions.
+          </p>
+          <div class="example">
+            <ul>
+              <li><span>p-static - </span>for classes that set <span>position static</span></li>
+              <li><span>p-relative - </span>for classes that set <span>position relative</span></li>
+              <li><span>p-absolute - </span>for classes that set <span>position absolute</span></li>
+              <li><span>p-fixed - </span>for classes that set <span>position fixed</span></li>
+              <li><span>p-sticky - </span>for classes that set <span>position sticky</span></li>
+            </ul>
+          </div>
+
+          <div class="code-container">
+            <pre class="code">
+              <code class="code-snippet">
+                .p-relative {
+                  position: relative;
+                }
+                .p-absolute {
+                  position: absolute;
+                }
+                .p-fixed {
+                  position: fixed;
+                }
+              </code>
+            </pre>
+            <button type="button" class="copy-btn">Copy code</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="text-align-center">
+      &copy; All Rights Reserved TO <span class="text-purple fw-bold">Seif Abd Al-Azem</span>
+  </footer>
+
+  <script src="./js/all.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

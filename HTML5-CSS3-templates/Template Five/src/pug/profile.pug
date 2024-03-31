@@ -1,0 +1,95 @@
+include includes/variables.pug
+include includes/functions.pug
+
+doctype html
+html(lang="en")
+    head
+        include includes/meta.pug
+        title My Profile
+        include includes/styles.pug
+    body
+        .sidebar
+                p(class= "logo") Elzero
+                ul
+                    each item, index in listItems
+                        li(class=index === 2 ? 'active' : '')
+                            a(href= item === 'Dashboard' ?  `${htmlFilesPath}index.html` : `${htmlFilesPath}${item.toLowerCase()}.html`)
+                                i(class=`${icons[index]} fa-fw`)
+                                span=item
+        include includes/header.pug
+        main
+            h1(class="page-heading") Profile
+            |
+            // Profile Content
+            .profile-content
+                // Profile Details Component
+                .box.profile-details
+                    // Profile Info
+                    .profile-info
+                        |
+                        |
+                        img(src=`${imgsPath}avatar.png`, alt="profile image")
+                        h3 Seif Abd Al-Azem
+                        p Level 20
+                        div
+                        div.rate
+                            |
+                            |
+                            - for (var i = 0; i < 5; i++)
+                                i.fa-solid.fa-star.orange-c.fs-13
+                                |
+                                |
+                        span 550 Rating
+                    |
+                    |
+                    // Profile Settings
+                    .profile-settings
+                        each info in profileInfo
+                            |
+                            |
+                            <!-- #{info.infoType} -->
+                            .profile-setting
+                                p= info.infoType
+                                div
+                                    each val, key in info
+                                        if key !== 'infoType'
+                                            p
+                                                span= `${toTitleCase(key)}: `
+                                                | #{val}
+                                .toggle
+                                    label
+                                        input(class="toggle-checkbox", type="checkbox", title="checkbox", checked)
+                                        .toggle-switch
+                    |
+                    |
+                // Other Information
+                .other-info
+                    // Skills Box
+                    .box.skills
+                        h2.widget-heading My Skills
+                        p.widget-desc Complete Skills List
+                        |
+                        ul
+                            each skillGroup in skills
+                                li
+                                    each skill in skillGroup
+                                        |
+                                        |
+                                        span.btn-shape= skill
+
+                    // Latest Activities Box
+                    .box.activities
+                        h2.widget-heading Latest Activities
+                        p.widget-desc Latest Activities Done By The User
+                        |
+                        |
+                        .latest-activities
+                            each activity in activities
+                                .activity
+                                    img(src=`${imgsPath}${activity.img}`, alt=`${activity.img.split(".")[0]}`)
+                                    .activity-head
+                                        span= activity.category
+                                        p= activity.description
+                                    .activity-time
+                                        span= activity.time
+                                        span= activity.date

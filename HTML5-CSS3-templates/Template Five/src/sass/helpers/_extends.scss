@@ -1,0 +1,37 @@
+@use './variables' as *;
+
+%main-width {
+    width: calc(100% - 220px);
+    margin-left: auto;
+    overflow: hidden;
+}
+
+%logo-deco {
+    content: "";
+    background-color: $black-color;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+%heading-deco {
+    content: "";
+    height: 3px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+%grid-display {
+    display: grid;
+    grid-gap: 20px;
+    padding: 0 20px;
+}
+
+%inputStyle {
+    border: none;
+    border-radius: 6px;
+    background-color: $div-bk-color;
+    padding: 10px;
+    font-size: 14px;
+}

@@ -1,0 +1,9 @@
+@use 'sass/helpers/variables' as *;
+@use 'sass/helpers/mixins' as *;
+@use 'sass/layout/global-rules';
+
+@use 'sass/layout/header';
+@use 'sass/components/headings';
+@use 'sass/pages/home';
+@use 'sass/layout/footer';
+

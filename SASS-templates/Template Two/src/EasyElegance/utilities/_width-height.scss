@@ -1,0 +1,10 @@
+@use "../helpers/variables" as *;
+
+@each $key, $val in $aspects {
+    .width-#{$key} {
+        width: $val;
+    }
+    .height-#{$key} {
+        height: $val;
+    }
+}

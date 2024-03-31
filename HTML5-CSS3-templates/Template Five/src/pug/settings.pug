@@ -1,0 +1,126 @@
+include includes/variables.pug
+
+doctype html
+html(lang="en")
+    head
+        include includes/meta.pug
+        title Settings
+        include includes/styles.pug
+    body
+        .sidebar
+                p(class= "logo") Elzero
+                ul
+                    each item, index in listItems
+                        li(class=index === 1 ? 'active' : '')
+                            a(href= item === 'Dashboard' ?  `${htmlFilesPath}index.html` : `${htmlFilesPath}${item.toLowerCase()}.html`)
+                                i(class=`${icons[index]} fa-fw`)
+                                span=item
+        include includes/header.pug
+        main
+            |
+            // Page Heading
+            h1(class="page-heading") Settings
+            |
+            |
+            .grid-two.settings
+                |
+                // Website Control Section
+                .box.site-control
+                    h2.widget-heading Site Control
+                    p.widget-desc Control The Website If There Is Maintenance
+                    |
+                    .control
+                        div
+                            span Website Control
+                            p Open/Close Website And Type The Reason
+                        .toggle
+                            label
+                                input.toggle-checkbox(type="checkbox" title="checkbox" checked)
+                                .toggle-switch
+                    textarea#control-msg(name="site control", placeholder="Close Message Content")
+                |
+                |
+                // General Info Section
+                .box.general-info
+                    h2.widget-heading General Info
+                    p.widget-desc General Information About Your Account
+                    |
+                    form(action="")
+                        label(for="f-name") First Name
+                        input(type="text", name="first name", id="f-name", placeholder="First Name")
+                        label(for="l-name") Last Name
+                        input(type="text", name="last name", id="l-name", placeholder="Last Name")
+                        .email-input
+                            label(for="email") Email
+                            .email-container
+                                input(type="email", name="email", id="email", placeholder="o@nn.sa", disabled)
+                                input(type="submit", value="Change")
+                |
+                |
+                // Security Info Section
+                .box.security-info
+                    h2.widget-heading Security Info
+                    p.widget-desc Security Information About Your Account
+                    |
+                    .security-input
+                        div
+                            span Password
+                            p Last Change On 25/10/2021
+                        a.btn-shape.blue-bk Change
+                    .security-input
+                        div
+                            span Two-Factor Authentication
+                            p Enable/Disable The Feature
+                        .toggle
+                            label
+                                input.toggle-checkbox(type="checkbox", title="checkbox", checked)
+                                .toggle-switch
+                    .security-input
+                        div
+                            span Devices
+                            p Check The Login Devices List
+                        a.btn-shape.dark-color.grey-bk Devices
+                |
+                |
+                // Social Info Section
+                .box.social-info
+                    h2.widget-heading Social Info
+                    p.widget-desc Social Media Information
+                    |
+                    .social-accounts
+                        each account in socialAccounts
+                            .social-account
+                                i(class= account.icon)
+                                input(type="text", placeholder= account.placeHolder)
+                |
+                |
+                // Widgets Control Section
+                .box.widgets-control
+                    h2.widget-heading Widgets Control
+                    p.widget-desc Show/Hide Widgets
+                    |
+                    each control, index in widgetsControls
+                        .control(class=index >= 3 && index <= 5 ? "d-flex align-center mb-15" : "")
+                            input(type="checkbox", id=control.inputId, checked)
+                            label(for=control.inputId)= control.label
+                |
+                |
+                // Backup Section
+                .box.backup-man
+                    h2.widget-heading Backup Manager
+                    p.widget-desc Control Backup Time And Location
+                    |
+                    .backup-date
+                        each date in backupData
+                            .date
+                                input(type="radio", name="time", id=date.toLowerCase(), checked)
+                                label(for=date.toLowerCase())= date
+                    |
+                    // Servers Selection
+                    .servers
+                        each server in serversData
+                            .server
+                                input(type="radio", name="servers", id=server.serverId)
+                                label(for=server.serverId)
+                                    i.fa-solid.fa-server
+                                    p= server.serverName

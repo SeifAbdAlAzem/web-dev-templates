@@ -1,0 +1,240 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixins' as *;
+@use '../helpers/extends' as *;
+
+// Start Settings Style
+.settings {
+    // Site Control
+    .site-control {
+        .control {
+            @include display-flex(space-between);
+            margin: 20px 0;
+        }
+        div:first-child p {
+            font-size: 13px;
+            color: $grey-color;
+            margin-top: 5px;
+        }
+        textarea {
+            border: 1px solid #ccc;
+            resize: none;
+            min-height: 150px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+        }
+    }
+
+    // General Info
+    .general-info {
+        form {
+            label {
+                display: block;
+                margin: 15px 0 10px 0;
+                font-size: 14px;
+                color: $grey-color;
+            }
+            input {
+                width: 100%;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                padding: 10px;
+            }
+            .email-input {
+                .email-container {
+                    display: flex;
+                    margin-bottom: 10px;
+                }
+                input[type="email"] {
+                    cursor: no-drop;
+                    background-color: #f0f4f8;
+                    color: #bbb;
+                    width: calc(100% - 80px);
+                }
+                input[type="submit"] {
+                    width: 80px;
+                    border: none;
+                    background-color: transparent;
+                    color: $blue-color;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    // Security Info
+    .security-info {
+        .security-input {
+            display: flex;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 15px;
+            &:last-child {
+                border: none;
+            }
+            div p {
+                font-size: 13px;
+                color: $grey-color;
+                margin-top: 5px;
+            }
+            a {
+                cursor: pointer;
+                font-size: 16px;
+            }
+            &:first-of-type a:hover {
+                background-color: $blue-alt-color;
+            }
+        }
+    }
+
+    // Social Info
+    .social-info {
+        .social-account {
+            display: flex;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            i {
+                background-color: #f6f6f6;
+                transition-duration: $transition-duration;
+                color: $grey-color;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+                border-right: 1px solid #ddd;
+                border-radius: 6px 0 0 6px;
+            }
+            input {
+                width: calc(100% - 40px);
+                border: none;
+                background-color: #f6f6f6;
+                padding-left: 10px;
+                font-size: 14px;
+                border-radius: 0 6px 6px 0;
+            }
+            &:focus-within i {
+                color: black;
+            }
+        }
+    }
+
+    // Widgets Control
+    .widgets-control {
+        .control {
+            display: flex;
+            margin: 20px 0;
+            input {
+                width: 19px;
+                height: 19px;
+                border-color: #ccc;
+                transition-duration: $transition-duration;
+                transform: scale(0) rotate(360deg);
+            }
+            input:checked {
+                background-color: $blue-color;
+                color: #fff;
+                transform: scale(1);
+                + label::before {
+                    border-color: $blue-color;
+                }
+            }
+            label {
+                position: relative;
+                margin-left: 12px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -1px;
+                    left: -32px;
+                    border: 2px solid $grey-color;
+                    transition-duration: $transition-duration;
+                    width: 17px;
+                    height: 17px;
+                    border-radius: 4px;
+                }
+                &:hover::before {
+                    border-color: $blue-color;
+                }
+            }
+        }
+    }
+
+    // Backup Manager
+    .backup-man {
+        .backup-date {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+            .date {
+                margin: 20px 0;
+                input {
+                    display: none;
+                }
+                label {
+                    position: relative;
+                    padding-left: 30px;
+                    cursor: pointer;
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        transition-duration: $transition-duration;
+                        border-radius: 50%;
+                    }
+                    &::before {
+                        border: 2px solid $grey-color;
+                        width: 18px;
+                        height: 18px;
+                        left: 0;
+                        top: -16%;
+                    }
+                    &::after {
+                        width: 14px;
+                        height: 14px;
+                        left: 4px;
+                        top: 1px;
+                        background-color: $blue-color;
+                        transform: scale(0);
+                    }
+                }
+                input:checked + label::before {
+                    border-color: $blue-color;
+                }
+                input:checked + label::after {
+                    transform: scale(1);
+                }
+            }
+        }
+        .servers {
+            display: flex;
+            justify-content: space-between;
+            input {
+                appearance: none;
+            }
+            .server {
+                width: 32%;
+                label {
+                    cursor: pointer;
+                    border: 2px solid #eee;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 20px 0;
+                    border-radius: 10px;
+                    i {
+                        margin-bottom: 10px;
+                    }
+                }
+                input:checked + label {
+                    border-color: $blue-color;
+                    color: $blue-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,169 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixins' as *;
+@use '../helpers/extends' as *;
+
+// Profile Style
+.profile-content {
+    padding: 0 20px;
+
+    // Profile Details widget
+    .profile-details {
+        @include display-flex();
+        padding: 0;
+        margin-bottom: 20px;
+
+        .profile-info {
+            @include display-flex(space-between, column);
+            gap: 10px;
+            border-right: 1px solid $grey-color;
+            padding: 20px;
+            width: 300px;
+
+            img {
+                width: 120px;
+                height: 120px;
+            }
+
+            p {
+                color: $grey-color;
+            }
+
+            div:first-of-type {
+                height: 6px;
+                width: 70%;
+                background-color: $div-bk-color;
+                position: relative;
+                border-radius: 6px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 70%;
+                    background-color: $blue-color;
+                }
+            }
+
+            span {
+                font-size: 13px;
+                color: $grey-color;
+            }
+        }
+
+        .profile-settings {
+            width: 100%;
+        }
+
+        .profile-setting {
+            border-bottom: 1px solid $border-color;
+            padding: 20px;
+            padding-bottom: 10px;
+            transition-duration: $transition-duration;
+            &:hover {
+                background-color: $div-bk-color;
+            }
+            &:last-child {
+                border: none;
+            }
+
+            > p {
+                font-size: 15px;
+                color: $grey-color;
+            }
+
+            div:first-of-type {
+                display: flex;
+                margin: 10px 0;
+
+                p {
+                    font-size: 14px;
+                    width: 240px;
+
+                    span {
+                        color: $grey-color;
+                    }
+                }
+            }
+
+            .toggle {
+                label {
+                    .toggle-switch {
+                        height: 20px;
+                        &::before {
+                            width: 13px;
+                            height: 13px;
+                            font-size: 10px;
+                            top: 3px;
+                        }
+                    }
+                    input:checked + .toggle-switch::before {
+                        left: 62px;
+                        top: 3px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Skills widget
+    .other-info {
+        display: flex;
+
+        .skills {
+            margin-right: 20px;
+            width: 35%;
+
+            ul li {
+                border-bottom: 1px solid $border-color;
+                padding: 15px 0;
+                &:last-child {
+                    border: none;
+                }
+                display: flex;
+                span {
+                    font-size: 14px;
+                    margin-right: 5px;
+                    color: $black-color;
+                    background-color: $div-bk-color;
+                }
+            }
+        }
+
+        // Activities widget
+        .activities {
+            width: 65%;
+            padding-bottom: 0;
+
+            .activity {
+                @include display-flex();
+                border-bottom: 1px solid $border-color;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+
+                &:last-child {
+                    border: none;
+                    margin-bottom: 0;
+                }
+
+                img {
+                    width: 64px;
+                    height: 64px;
+                    margin-right: 10px;
+                }
+
+                .activity-head p,
+                .activity-time span:nth-child(2) {
+                    color: $grey-color;
+                    margin-top: 10px;
+                    display: block;
+                }
+
+                .activity-time {
+                    margin-left: auto;
+                    text-align: end;
+                }
+            }
+        }
+    }
+}

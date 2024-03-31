@@ -1,0 +1,90 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixins' as *;
+@use '../helpers/extends' as *;
+
+// Friends Style
+.friends {
+    .friend {
+        padding: 10px 15px;
+
+        .contact {
+            display: flex;
+
+            i {
+                margin-right: 10px;
+                background-color: $div-bk-color;
+                padding: 10px;
+                font-size: 13px;
+                cursor: pointer;
+                transition-duration: $transition-duration;
+                color: #666;
+                border-radius: 50%;
+            }
+
+            i:hover {
+                color: $white-bk;
+                background-color: $blue-color;
+            }
+        }
+
+        .friend-bio {
+            @include display-flex(space-between, column);
+
+            img {
+                width: 100px;
+                height: 100px;
+                margin: 10px 0;
+                border-radius: 50%;
+            }
+
+            p {
+                font-size: 13px;
+                color: $grey-color;
+                margin-top: 5px;
+            }
+        }
+
+        .friend-stats {
+            border-top: 1px solid $border-color;
+            border-bottom: 1px solid $border-color;
+            margin: 15px 0;
+            padding: 15px 0;
+            position: relative;
+
+            p {
+                margin-bottom: 10px;
+                font-size: 14px;
+
+                i {
+                    margin-right: 5px;
+                }
+            }
+
+            span {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                font-size: 40px;
+                opacity: 0.2;
+                color: $orange-color;
+                font-weight: bold;
+                transform: translateY(-50%);
+            }
+        }
+
+        .friend-details {
+            @include display-flex(space-between);
+            margin-bottom: 10px;
+
+            > span {
+                color: $grey-color;
+                font-size: 13px;
+            }
+
+            div span {
+                cursor: pointer;
+                margin: 0 5px;
+            }
+        }
+    }
+}

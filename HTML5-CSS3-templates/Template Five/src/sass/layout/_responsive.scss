@@ -1,0 +1,423 @@
+// Start Responsive Style
+
+@media (max-width: 680px) {
+    header {
+        width: calc(100% - 70px);
+    }
+    main {
+        width: calc(100% - 70px);
+    }
+}
+
+// Start Dashboard Style
+
+@media (min-width: 1200px) {
+    .dashboard .projects {
+        width: calc(100vw - 275px);
+    }
+}
+
+@media (max-width: 680px) {
+    .sidebar {
+        width: 70px;
+    }
+    .sidebar ul li a span,
+    .logo::before,
+    .logo::after {
+        display: none;
+    }
+    .page-content {
+        width: calc(100vw - 70px);
+        margin-left: 70px;
+    }
+    .main-content {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        grid-gap: 10px;
+        padding: 0;
+    }
+    .box {
+        margin: 0 15px;
+    }
+    .dashboard .welcome .welcome-head .intro + img {
+        width: 150px;
+    }
+    .logo {
+        font-size: 14px;
+    }
+    .dashboard .tickets .tickets-stats .ticket-state  {
+        width: 100%;
+    }
+}
+
+@media (max-width: 520px) {
+    .widget-heading {
+        font-size: 16px;
+    }
+    .main-content {
+        grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    }
+    .box:not(:first-child) {
+        padding: 20px 10px 10px;
+    }
+    .dashboard .latest-news {
+        flex-direction: column;
+        align-items: center;
+    }
+    .dashboard .latest-news img {
+        margin: 0;
+    }
+    .dashboard .latest-news p {
+        margin: auto;
+    }
+    .dashboard .latest-news .news-content {
+        margin: 15px 0;
+        text-align: center;
+    }
+    header {
+        flex-direction: column-reverse;
+    }
+    header .search {
+        margin-top: 25px;
+    }
+    header .search input {
+        width: 120px;
+    }
+    header .search input:focus {
+        width: 145px;
+    }
+    .dashboard .welcome .welcome-head {
+        flex-direction: column;
+        align-items: center;
+    }
+    .dashboard .welcome .welcome-head .intro + img {
+        width: 120px;
+    }
+    .dashboard .welcome .welcome-body {
+        flex-direction: column;
+    }
+    .dashboard .welcome .welcome-body .info:nth-child(2) {
+        margin: 20px 0;
+    }
+    .dashboard .welcome .welcome-body .info p {
+        margin-top: 5px;
+    }
+    .dashboard .welcome .welcome-head .profile-img {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .dashboard .targets .target {
+        flex-direction: column;
+    }
+    .dashboard .targets .target .icon {
+        margin: 0;
+    }
+    .dashboard .targets .target .target-content {
+        width: 100%;
+        margin-top: 5px;
+    }
+    .dashboard .tasks .latest-task .task-content h3 {
+        font-size: 11px;
+    }
+    .dashboard .tasks .latest-task .task-content p {
+        font-size: 8px;
+    }
+    .dashboard .tasks .latest-task i {
+        font-size: 15px;
+        margin-left: 7px;
+    }
+    .dashboard .top-searched .top-results .result-item p {
+        font-size: 14px;
+    }
+
+    .dashboard .top-searched .top-results .result-items-head p {
+        font-size: 14px;
+    }
+
+    .dashboard .uploads .uploaded-file {
+        align-items: start;
+    }
+
+    .dashboard .uploads .uploaded-file span {
+        margin-left: auto;
+    }
+
+    .dashboard .uploads .uploaded-file .file-details img {
+        width: 35px;
+        height: 35px;
+    }
+    .dashboard .uploads .uploaded-file .file-details {
+        margin-bottom: 15px;
+    }
+    .dashboard .uploads .uploaded-file .file-details h3 {
+        font-size: 13px;
+    }
+    .dashboard .projects-progress .project-progress p {
+        font-size: 10px;
+    }
+    .dashboard .projects-progress .project-progress p::before {
+        width: 16px;
+        height: 16px;
+    }
+    .dashboard .projects-progress .project-progress p::after {
+        left: 9px;
+    }
+    .dashboard .reminders ul .reminder p {
+        font-size: 12px;
+    }
+    .dashboard .reminders ul .reminder span {
+        font-size: 10px;
+    }
+    .dashboard .posts .post-writer img {
+        width: 35px;
+        height: 35px;
+    }
+    .dashboard .media .media-account {
+        flex-direction: column;
+        padding-right: 0;
+    }
+    .dashboard .media .media-account .media-app {
+        margin: 0;
+    }
+    .dashboard .media .media-account p {
+        margin: 10px 0;
+    }
+    .dashboard .media .media-account a {
+        margin: auto;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 300px) {
+    .dashboard .uploads .uploaded-file {
+        flex-direction: column;
+    }
+}
+
+/* End Dashboard Style */
+
+/* Start Settings Design */
+
+@media (max-width: 680px) {
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar ul li a {
+        padding: 10px 10px 10px 20px;
+    }
+
+    .settings .site-control .control,
+    .settings .security-info .security-input,
+    .settings .backup-man .servers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .settings .site-control .control div:first-child,
+    .settings .security-info .security-input div:first-child {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .settings .general-info form .email-input .email-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .settings .general-info form .email-input input[type="email"],
+    .settings .backup-man .servers .server {
+        width: 100%;
+    }
+
+    .settings .backup-man .servers label {
+        margin: 10px 0;
+    }
+}
+
+/* End Settings Style */
+
+/* Start Profile Style */
+
+@media (max-width:820px) {
+    .profile-content .profile-details .profile-setting div:first-of-type {
+        flex-direction: column;
+    }
+
+    .profile-content .profile-details .profile-setting div:first-of-type p {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .profile-content .other-info .skills {
+        padding: 20px 10px;
+    }
+
+    .profile-content .other-info .skills ul li span {
+        font-size: 11px;
+    }
+
+    .profile-content .other-info .activities .activity .activity-head p,
+    .profile-content .other-info .activities .activity .activity-time span:nth-child(2) {
+        font-size: 12px;
+    }
+}
+
+@media (max-width:680px) {
+    .profile-content  {
+        padding: 0;
+    }
+
+    .profile-content .profile-details {
+        flex-direction: column;
+    }
+
+    .profile-content .profile-details .profile-info {
+        width: 200px;
+        border-right: none;
+    }
+
+    .profile-content .profile-details .profile-setting div:first-of-type {
+        flex-direction: column;
+    }
+
+    .profile-content .profile-details .profile-setting div:first-of-type p {
+        margin-bottom: 5px;
+    }
+
+    .profile-content .other-info .skills {
+        padding: 20px 10px;
+        margin-bottom: 20px;
+    }
+
+    .profile-content .other-info {
+        flex-direction: column;
+    }
+
+    .profile-content .other-info .skills,
+    .profile-content .other-info .activities {
+        width: calc(100% - 30px);
+    }
+
+    .profile-content .other-info .skills ul li span {
+        font-size: 11px;
+    }
+
+    .profile-content .other-info .activities .activity {
+        flex-direction: column;
+    }
+
+    .profile-content .other-info .activities .activity .activity-head {
+        margin: 10px 0;
+    }
+
+    .profile-content .other-info .activities .activity .activity-time {
+        margin-left: 0;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .profile-content .profile-details .profile-setting div:first-of-type p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width:280px) {
+    .profile-content .profile-details .profile-setting div:first-of-type p {
+        font-size: 10px;
+    }
+}
+
+// Projects Style
+
+@media (max-width: 680px) {
+    .grid-two {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 0;
+    }
+
+    .projects .project div:first-child {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .project div:last-child {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .projects .project .project-tasks {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .project div:last-child .project-progress {
+        width: 100%;
+    }
+
+    .project div:last-child span {
+        font-size: 18px;
+    }
+}
+
+// Start Courses Style
+
+@media (max-width: 680px) {
+    .grid-three {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 0;
+    }
+
+    .courses .course img:first-child {
+        top: 10px;
+        left: 10px;
+    }
+}
+
+// Start Friends Design
+
+@media (max-width: 680px) {
+    .friends .friend .friend-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+// Start Files Style
+
+@media (max-width: 280px) {
+    .files-stats {
+        min-width: 192px;
+    }
+}
+
+@media (max-width: 680px) {
+    .files-content {
+        flex-direction: column-reverse;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .files-content .files-stats {
+        min-width: 175px;
+        position: static;
+        margin: 0 10px;
+    }
+}
+
+// Start Plans Style
+
+@media (max-width: 280px) {
+    .plans .plan .plan-price p {
+        font-size: 30px;
+    }
+
+    .plans .plan ul li {
+        font-size: 13px;
+    }
+}

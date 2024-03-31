@@ -1,0 +1,94 @@
+@use "../helpers/variables" as *;
+@use "sass:math";
+
+$border-properties: (
+    "border": (
+        "values": (
+            "default": 1px solid,
+            "none": none,
+            "top": 1px solid,
+            "right": 1px solid,
+            "bottom": 1px solid,
+            "left": 1px solid,
+            "x": 1px solid,
+            "y": 1px solid,
+            "t-0": 1px solid,
+        ),
+    ),
+    "border-width": (
+        "prefix": "bw",
+        "values": (
+            "medium": medium,
+            "thick": thick,
+            "thin": thin,
+        ),
+    ),
+    "border-color": (
+        "prefix": "bc",
+        "values": (
+            "primary": $primary,
+            "secondary": $secondary,
+            "error": $error,
+            "info": $info,
+            "blue": #1919e6,
+            "red": #e61919,
+            "yellow": #e6e619,
+            "green": #19e635,
+            "orange": #ffa600,
+            "purple": #9900ff,
+            "gray": #808080,
+            "black": black,
+            "white": white,
+        ),
+    ),
+    "border-radius": (
+        "prefix": "br",
+        "values": (
+        "default": $base-border-radius,
+        "none": 0,
+        "xs": math.div($base-border-radius, 4),
+        "sm": math.div($base-border-radius, 2),
+        "lg": $base-border-radius * 2,
+        "full": 50%,
+        )
+    ),
+);
+
+@each $property, $map in $border-properties {
+    $prefix: map-get($map, "prefix");
+    $values: map-get($map, "values");
+
+    @each $key, $value in $values {
+        @if($property == "border") {
+            @if ($key == "default" or $key == "none") {
+                .#{$property}-#{$key} {
+                    #{$property}: $value;
+                }
+            } @else if ($key == "x") {
+                .#{$property}-#{$key} {
+                    border-right: $value;
+                    border-left: $value;
+                }
+            } @else if ($key == "y") {
+                .#{$property}-#{$key} {
+                    border-top: $value;
+                    border-bottom: $value;
+                }
+            } @else if ($key == "t-0") {
+                .#{$property}-#{$key} {
+                    border-right: $value;
+                    border-bottom: $value;
+                    border-left: $value;
+                }
+            } @else {
+                .#{$property}-#{$key} {
+                    #{$property}-#{$key}: $value;
+                }
+            }
+        } @else {
+            .#{$prefix}-#{$key} {
+                #{$property}: $value;
+            }
+        }
+    }
+}

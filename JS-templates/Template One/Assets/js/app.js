@@ -306,7 +306,7 @@ function calculateTimelineRightOffset() {
     let rightTimelineRightOffset = 18; // Default percentage value for right timeline
 
     // Adjust for Galaxy Fold
-    if (windowWidth <= 280) {
+    if (windowWidth <= 480) {
         leftTimelineRightOffset = 0; // Set left timeline right offset to 0
         rightTimelineRightOffset = 0; // Set right timeline right offset to 0
     }

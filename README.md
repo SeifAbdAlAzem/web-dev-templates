@@ -1,6 +1,6 @@
 # Web Templates Repository
 
-Welcome to the Web Templates Repository! This repository contains a collection of templates for various web development technologies, including HTML5, CSS3, Bootstrap, JavaScript, and SASS. Whether you're a beginner looking to learn or a seasoned developer in need of inspiration, this repository has something for everyone.
+Welcome to the Web Templates Repository! This repository contains a collection of templates for various web development technologies, including HTML5, CSS3, Bootstrap, JavaScript, SASS, and React. Whether you're a beginner looking to learn or a seasoned developer in need of inspiration, this repository has something for everyone.
 
 ## Folder Structure
 
@@ -10,6 +10,7 @@ The repository is organized into subfolders, each containing templates for a spe
 - **BootStrap-templates**: Templates utilizing the Bootstrap framework for responsive design and component styling.
 - **JS-templates**: Templates incorporating JavaScript for dynamic interactions and enhanced user experiences.
 - **SASS-templates**: Templates developed with SASS (Syntactically Awesome Style Sheets) for efficient CSS development and advanced styling features.
+- **React-templates**: Templates built with React, a JavaScript library for building user interfaces.
 
 Feel free to explore each subfolder to discover a wide range of templates suitable for various web development projects.
 
